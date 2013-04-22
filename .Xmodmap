@@ -1,0 +1,6 @@
+!
+! Swap Caps_Lock and Escape
+!
+clear lock
+keycode 0x42=Escape
+keycode 66 = Escape NoSymbol Escape NoSymbol Escape
