@@ -3,18 +3,19 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
  '(custom-enabled-themes (quote (tango-dark)))
+ '(show-paren-mode t)
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 98 :width normal)))))
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 100 :width normal)))))
 
 ;; Custom options by Dhole
 
-(add-to-list 'load-path "~/.emacs.d/") 
 
 ;; Set identation style for C/C++
 (setq c-default-style "bsd"
@@ -70,6 +71,20 @@
                                                       plain-tex-mode))
                  (let ((mark-even-if-inactive transient-mark-mode))
                    (indent-region (region-beginning) (region-end) nil))))))
+
+
+(require 'package)
+;; Add the original Emacs Lisp Package Archive
+(add-to-list 'package-archives
+             '("elpa" . "http://tromey.com/elpa/"))
+;; Add the user-contributed repository
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+
+
+;; End
+(add-to-list 'load-path "~/.emacs.d/") 
 
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers
