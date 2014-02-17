@@ -81,10 +81,15 @@
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 
-
+(global-linum-mode t)
 
 ;; End
 (add-to-list 'load-path "~/.emacs.d/") 
 
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers
+
+(require 'fill-column-indicator)
+  (setq fci-rule-width 1)
+  (setq fci-rule-color "darkgreen")
+  (add-hook 'prog-mode-hook 'fci-mode)
