@@ -12,14 +12,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 100 :width normal)))))
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 86 :width normal)))))
 
 ;; Custom options by Dhole
 
 
 ;; Set identation style for C/C++
-(setq c-default-style "bsd"
-      c-basic-offset 4)
+(setq c-default-style "bsd")
+;;      c-basic-offset 8)
 
  ;; Visually wrap words only in text mode
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
@@ -89,7 +89,22 @@
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers
 
+;; Activate line at 80 chars, for prog-mode
+(setq fci-rule-column 80)
 (require 'fill-column-indicator)
-  (setq fci-rule-width 1)
-  (setq fci-rule-color "darkgreen")
-  (add-hook 'prog-mode-hook 'fci-mode)
+
+(setq fci-rule-width 1)
+(setq fci-rule-color "darkgreen")
+(add-hook 'prog-mode-hook 'fci-mode)
+
+;; Enable truncate line with compatibility for fill-column-indicator
+(setq fci-handle-truncate-lines nil)
+(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode 1)
+(defun auto-fci-mode (&optional unused)
+(if (> (window-width) fci-rule-column)
+    (fci-mode 1)
+    (fci-mode 0))
+)
+(add-hook 'after-change-major-mode-hook 'auto-fci-mode)
+(add-hook 'window-configuration-change-hook 'auto-fci-mode)
