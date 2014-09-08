@@ -1,0 +1,10 @@
+((("ADDR_INT_VBlank" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("ADDR_INT_LCDSTAT_Int" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("ADDR_INT_Timer_Overflow" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ADDR_INT_End_Serial_IO_Transfer" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ADDR_INT_High_to_Low_P10_P13" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))

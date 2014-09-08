@@ -6,6 +6,7 @@
  '(column-number-mode t)
  '(custom-enabled-themes (quote (tango-dark)))
  '(show-paren-mode t)
+ '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -16,6 +17,7 @@
 
 ;; Custom options by Dhole
 
+(setq jit-lock-defer-time 0.05)
 
 ;; Set identation style for C/C++
 (setq c-default-style "bsd")
@@ -81,10 +83,14 @@
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 
+(package-initialize)
 (global-linum-mode t)
 
 ;; End
 (add-to-list 'load-path "~/.emacs.d/") 
+
+(require 'auto-complete)
+(global-auto-complete-mode t)
 
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers
@@ -108,3 +114,4 @@
 )
 (add-hook 'after-change-major-mode-hook 'auto-fci-mode)
 (add-hook 'window-configuration-change-hook 'auto-fci-mode)
+
