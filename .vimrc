@@ -175,7 +175,7 @@ nnoremap <silent> <C-Left> :tabprevious<CR>
 nnoremap <silent> <C-t> :tabnew<CR>
 
 set cursorline " highlight current line
-hi CursorLine term=none cterm=none ctermbg=3 " adjust color
+"hi CursorLine term=none cterm=none ctermbg=darkred ctermfg=white " adjust color
 
 set ttyfast                   " we have a fast terminal
 set undolevels=1000           " 1000 undos
