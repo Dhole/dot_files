@@ -172,7 +172,9 @@ set smarttab
 " Linebreak on 500 characters
 "set lbr
 "set tw=500
-set textwidth=80
+"set textwidth=80
+set colorcolumn=80
+highlight ColorColumn ctermbg=235
 
 set autoindent "Auto indent
 set smartindent "Smart indent
