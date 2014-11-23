@@ -93,7 +93,7 @@ $
 	#
 
 # File marks:
-'0  1  4  /media/raid1-100-data1/Documents/github/dot_files/update.sh
+'0  1  8  /media/raid1-100-data1/Documents/github/dot_files/update.sh
 '1  2  8  /media/raid1-100-data1/Documents/github/dot_files/update.sh
 '2  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 '3  1  0  /media/raid1-100-data1/Documents/github/dot_files/add
@@ -105,7 +105,7 @@ $
 '9  1  0  /media/raid1-100-data1/Documents/github/dot_files/main.c
 
 # Jumplist (newest first):
--'  1  4  /media/raid1-100-data1/Documents/github/dot_files/update.sh
+-'  1  8  /media/raid1-100-data1/Documents/github/dot_files/update.sh
 -'  2  8  /media/raid1-100-data1/Documents/github/dot_files/update.sh
 -'  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 -'  1  0  /media/raid1-100-data1/Documents/github/dot_files/add
@@ -206,12 +206,12 @@ $
 # History of marks within files (newest to oldest):
 
 > /media/raid1-100-data1/Documents/github/dot_files/update.sh
-	"	1	4
-	^	1	5
-	.	1	4
+	"	1	8
+	^	1	9
+	.	1	8
 	+	4	7
 	+	2	8
-	+	1	4
+	+	1	8
 
 > /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 	"	1	0
