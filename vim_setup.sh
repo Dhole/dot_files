@@ -1,3 +1,5 @@
+cp -R .vim* ~/.
+
 ## Create bundle folder
 mkdir -p .vim/bundle
 
