@@ -18,6 +18,8 @@ $
 
 # Command Line History (newest to oldest):
 :q
+:colorscheme custom_Mustang
+:wq
 :colorscheme Mustang
 :colorscheme ir_black
 :colorscheme badwolf
@@ -35,8 +37,6 @@ $
 :colorscheme tango-desert
 :colorscheme darktango
 :colorscheme bandit
-:CtrlP
-:CommandT
 
 # Search String History (newest to oldest):
 ?/case
@@ -90,23 +90,26 @@ $
 "q	CHAR	0
 	;
 ""-	CHAR	0
-	/
+	#
 
 # File marks:
-'0  50  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'1  106  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'2  59  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'3  12  22  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'4  140  19  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'5  19  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'6  22  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'7  32  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'8  29  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'9  28  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'0  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'1  1  0  /media/raid1-100-data1/Documents/github/dot_files/main.c
+'2  6  25  /media/raid1-100-data1/Documents/github/dot_files/.git/COMMIT_EDITMSG
+'3  50  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'4  106  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'5  59  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'6  12  22  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'7  140  19  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'8  19  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'9  22  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 
 # Jumplist (newest first):
--'  50  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 -'  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+-'  1  0  /media/raid1-100-data1/Documents/github/dot_files/main.c
+-'  6  25  /media/raid1-100-data1/Documents/github/dot_files/.git/COMMIT_EDITMSG
+-'  1  0  /media/raid1-100-data1/Documents/github/dot_files/.git/COMMIT_EDITMSG
+-'  50  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 -'  106  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 -'  102  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 -'  98  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
@@ -199,17 +202,23 @@ $
 -'  81  0  ~/.vimrc
 -'  69  0  ~/.vimrc
 -'  61  0  ~/.vimrc
--'  13  0  ~/.vimrc
--'  10  0  ~/.vimrc
--'  4  0  ~/.vimrc
 
 # History of marks within files (newest to oldest):
 
 > /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-	"	50	0
+	"	1	0
 	.	1	0
 	+	1354	41
 	+	1	0
+
+> /media/raid1-100-data1/Documents/github/dot_files/main.c
+	"	1	0
+
+> /media/raid1-100-data1/Documents/github/dot_files/.git/COMMIT_EDITMSG
+	"	6	25
+	^	6	26
+	.	6	25
+	+	6	25
 
 > /media/raid1-100-data1/Documents/tmp/gameboy/lr35902
 	"	1	0

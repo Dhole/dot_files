@@ -129,7 +129,7 @@ set mat=2
 set background=dark
 "let g:solarized_termcolors=256
 "g:solarized_contrast high
-colorscheme Mustang
+colorscheme custom_Mustang
 
 " Set extra options when running in GUI mode
 if has("gui_running")
