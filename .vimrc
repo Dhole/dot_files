@@ -36,7 +36,7 @@ Plugin 'ctrlp.vim'
 "Plugin 'DarkZen-Color-Scheme'
 "Plugin 'Distinguished'
 "Plugin 'badwolf'
-Plugin 'edkolev/tmuxline.vim'
+"Plugin 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-sleuth'
 Plugin 'fatih/vim-go'
 
@@ -65,14 +65,14 @@ filetype plugin indent on    " required
 let g:airline_theme             = 'powerlineish'
 let g:airline_enable_branch     = 1
 "let g:airline_enable_syntastic  = 1
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
+"if !exists('g:airline_symbols')
+"  let g:airline_symbols = {}
+"endif
 
 " unicode symbols
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.branch = '⎇'
+"let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '◀'
+"let g:airline_symbols.branch = '⎇'
 
 """"""""""""""""""""""""""""""
 " End of Plugins configuration

@@ -18,11 +18,11 @@ $
 
 # Command Line History (newest to oldest):
 :q
+:w
+:PluginInstall
 :q!
 :GoRun
-:w
 :.cc
-:PluginInstall
 :PluginSearch sleuth
 :set list
 :set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
@@ -69,52 +69,50 @@ $
 # Registers:
 "0	LINE	0
 	Plugin 'edkolev/tmuxline.vim'
-"1	LINE	0
-	Plugin 'Gentooish'
+""1	LINE	0
+	let g:airline_separator = 0
 "2	LINE	0
-	Plugin 'candy.vim'
+	Plugin 'Gentooish'
 "3	LINE	0
-	
+	Plugin 'candy.vim'
 "4	LINE	0
-	colorscheme mustang
+	
 "5	LINE	0
-	set lazyredraw                " don't redraw when don't have to
+	colorscheme mustang
 "6	LINE	0
-	colorscheme wombat256
+	set lazyredraw                " don't redraw when don't have to
 "7	LINE	0
-	set background=dark
+	colorscheme wombat256
 "8	LINE	0
-	let g:airline_symbols.linenr = '␤'
+	set background=dark
 "9	LINE	0
-	  let g:airline_left_sep = '»'
+	let g:airline_symbols.linenr = '␤'
 "q	CHAR	0
 	;
-""-	CHAR	0
+"-	CHAR	0
 	"
 
 # File marks:
-'0  45  0  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
-'1  41  6  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
-'2  1  0  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
-'3  8  0  /media/raid1-100-data1/Documents/tmp/golang/fibs.go
-'4  34  17  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
-'5  41  20  ~/.vimrc
-'6  7  0  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
-'7  86  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'8  12  6  /media/raid1-100-data1/Documents/tmp/tuenti/1/1.py
-'9  54  37  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'0  12  0  ~/.vimrc
+'1  75  0  ~/.vimrc
+'2  76  26  ~/.vimrc
+'3  41  20  ~/.vimrc
+'4  7  0  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
+'5  86  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'6  12  6  /media/raid1-100-data1/Documents/tmp/tuenti/1/1.py
+'7  54  37  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'8  1  0  ~/.vimrc
+'9  40  24  ~/.vimrc
 
 # Jumplist (newest first):
--'  1  0  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
--'  45  0  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
--'  41  6  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
--'  8  0  /media/raid1-100-data1/Documents/tmp/golang/fibs.go
--'  1  0  /media/raid1-100-data1/Documents/tmp/golang/fibs.go
--'  34  17  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
+-'  12  0  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  75  0  ~/.vimrc
+-'  76  26  ~/.vimrc
 -'  41  20  ~/.vimrc
 -'  40  0  ~/.vimrc
--'  1  0  ~/.vimrc
 -'  7  0  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
+-'  1  0  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
 -'  86  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 -'  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 -'  12  6  /media/raid1-100-data1/Documents/tmp/tuenti/1/1.py
@@ -199,45 +197,19 @@ $
 -'  10  0  ~/.vimrc
 -'  4  0  ~/.vimrc
 -'  91  0  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
--'  75  0  ~/.vimrc
 -'  73  0  ~/.vimrc
 -'  67  52  ~/.vimrc
+-'  66  35  ~/.vimrc
+-'  1  0  /tmp/gameboy/main.c
+-'  1  0  /tmp/gameboy/main.h
+-'  34  23  /tmp/main.c
 
 # History of marks within files (newest to oldest):
 
-> /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
-	"	1	0
-	^	45	1
-	.	45	1
-	+	41	28
-	+	42	0
-	+	1	0
-	+	49	1
-	+	51	0
-	+	41	6
-	+	45	1
-
-> /media/raid1-100-data1/Documents/tmp/golang/fibs.go
-	"	20	0
-	^	20	1
-	.	20	1
-	+	1	0
-	+	8	0
-	+	19	1
-	+	20	1
-
 > ~/.vimrc
-	"	41	20
-	^	41	21
-	.	41	20
-	+	133	18
-	+	131	0
-	+	18	0
-	+	133	18
-	+	19	0
-	+	174	15
-	+	172	0
-	+	173	0
+	"	12	0
+	^	75	1
+	.	75	0
 	+	3	0
 	+	3	0
 	+	133	20
@@ -330,6 +302,53 @@ $
 	+	40	0
 	+	42	0
 	+	41	20
+	+	39	0
+	+	76	0
+	+	68	0
+	+	69	0
+	+	70	0
+	+	73	0
+	+	74	0
+	+	75	0
+
+> ~/[Vundle] Installer
+	"	14	0
+	.	1	0
+	+	163	0
+	+	157	0
+	+	150	0
+	+	143	0
+	+	126	0
+	+	109	0
+	+	92	0
+	+	75	0
+	+	58	0
+	+	39	0
+	+	29	0
+	+	26	0
+	+	14	0
+	+	1	0
+
+> /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
+	"	1	0
+	^	45	1
+	.	45	1
+	+	41	28
+	+	42	0
+	+	1	0
+	+	49	1
+	+	51	0
+	+	41	6
+	+	45	1
+
+> /media/raid1-100-data1/Documents/tmp/golang/fibs.go
+	"	20	0
+	^	20	1
+	.	20	1
+	+	1	0
+	+	8	0
+	+	19	1
+	+	20	1
 
 > /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 	"	86	1
@@ -350,23 +369,6 @@ $
 	+	14	0
 	+	13	0
 	+	12	4
-
-> ~/[Vundle] Installer
-	"	13	0
-	.	1	0
-	+	150	0
-	+	144	0
-	+	137	0
-	+	130	0
-	+	113	0
-	+	96	0
-	+	79	0
-	+	62	0
-	+	45	0
-	+	26	0
-	+	16	0
-	+	13	0
-	+	1	0
 
 > ~/[Vundle] search
 	"	3	0
