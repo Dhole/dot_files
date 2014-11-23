@@ -124,7 +124,7 @@ set mat=2
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-"syntax enable
+syntax enable
 
 set background=dark
 "let g:solarized_termcolors=256
