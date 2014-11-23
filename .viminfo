@@ -93,18 +93,19 @@ $
 		
 
 # File marks:
-'0  27  0  ~/.vimrc
-'1  177  32  ~/.vimrc
-'2  20  95  ~/.vimrc
-'3  178  32  ~/.vimrc
-'4  15  86  ~/test
-'5  30  0  ~/.vimrc
-'6  1  0  ~/.vimrc
-'7  1  0  ~/Desktop/todo.txt
-'8  1  78  ~/test.txt
-'9  8  35  /media/raid1-100-data1/Documents/tmp/matasano/README.md
+'0  1  0  /media/raid1-100-data1/Documents/github/dot_files/.git/MERGE_MSG
+'1  27  0  ~/.vimrc
+'2  177  32  ~/.vimrc
+'3  20  95  ~/.vimrc
+'4  178  32  ~/.vimrc
+'5  15  86  ~/test
+'6  30  0  ~/.vimrc
+'7  1  0  ~/.vimrc
+'8  1  0  ~/Desktop/todo.txt
+'9  1  78  ~/test.txt
 
 # Jumplist (newest first):
+-'  1  0  /media/raid1-100-data1/Documents/github/dot_files/.git/MERGE_MSG
 -'  27  0  ~/.vimrc
 -'  1  0  ~/.vimrc
 -'  177  32  ~/.vimrc
@@ -204,6 +205,9 @@ $
 -'  122  0  ~/.vimrc
 
 # History of marks within files (newest to oldest):
+
+> /media/raid1-100-data1/Documents/github/dot_files/.git/MERGE_MSG
+	"	1	0
 
 > ~/.vimrc
 	"	27	0
