@@ -19,6 +19,17 @@ $
 # Command Line History (newest to oldest):
 :q
 :colorscheme custom_Mustang
+:w
+:PluginSearch badwolf
+:PluginSearch dracula
+:PluginSearch night
+:PluginSearch tomorrownight
+:PluginSearch tomorrow
+:PluginSearch disting
+:PluginSearch darkz
+:PluginSearch gentoo
+:PluginSearch holokai
+:PluginSearch seoul
 :wq
 :colorscheme Mustang
 :colorscheme ir_black
@@ -26,19 +37,11 @@ $
 :colorscheme distinguished
 :colorscheme seoul
 :colorscheme
-:colorscheme darkzen
-:colorscheme darkZ
-:q!
-:colorscheme gentooish
-:w
-:PluginSearch tango
-:PluginInstall
-:colorscheme tangoshady
-:colorscheme tango-desert
-:colorscheme darktango
-:colorscheme bandit
 
 # Search String History (newest to oldest):
+?/colorsch
+?/colorsche
+?/dark
 ?/case
 ?/ADDR
 ?/ADDR_INT
@@ -49,16 +52,13 @@ $
 ?/colorscheme
 ?/cand
 ?/g:solarized
-?/colorsch
 ?/colorsc	
 ?/syntax
-?/colorsche
 ?/Plugin
 ?/256
 ?/Sola
 ?/showma}}}
 ?/textwidth
-?/Busy
 
 # Expression History (newest to oldest):
 
@@ -93,22 +93,27 @@ $
 	#
 
 # File marks:
-'0  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'1  1  0  /media/raid1-100-data1/Documents/github/dot_files/main.c
-'2  6  25  /media/raid1-100-data1/Documents/github/dot_files/.git/COMMIT_EDITMSG
-'3  50  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'4  106  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'5  59  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'6  12  22  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'7  140  19  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'8  19  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-'9  22  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'0  17  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'1  13  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'2  6  10  /media/raid1-100-data1/Documents/github/dot_files/.git/COMMIT_EDITMSG
+'3  1  11  /media/raid1-100-data1/Documents/github/dot_files/.gitignore
+'4  8  23  /media/raid1-100-data1/Documents/github/dot_files/vim_setup.sh
+'5  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'6  1  0  /media/raid1-100-data1/Documents/github/dot_files/main.c
+'7  50  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'8  106  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+'9  59  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 
 # Jumplist (newest first):
+-'  17  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 -'  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
--'  1  0  /media/raid1-100-data1/Documents/github/dot_files/main.c
--'  6  25  /media/raid1-100-data1/Documents/github/dot_files/.git/COMMIT_EDITMSG
+-'  13  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
+-'  6  10  /media/raid1-100-data1/Documents/github/dot_files/.git/COMMIT_EDITMSG
 -'  1  0  /media/raid1-100-data1/Documents/github/dot_files/.git/COMMIT_EDITMSG
+-'  1  11  /media/raid1-100-data1/Documents/github/dot_files/.gitignore
+-'  8  23  /media/raid1-100-data1/Documents/github/dot_files/vim_setup.sh
+-'  1  0  /media/raid1-100-data1/Documents/github/dot_files/vim_setup.sh
+-'  1  0  /media/raid1-100-data1/Documents/github/dot_files/main.c
 -'  50  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 -'  106  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
 -'  102  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
@@ -198,94 +203,59 @@ $
 -'  94  0  ~/.vimrc
 -'  91  0  ~/.vimrc
 -'  87  0  ~/.vimrc
--'  84  0  ~/.vimrc
--'  81  0  ~/.vimrc
--'  69  0  ~/.vimrc
--'  61  0  ~/.vimrc
 
 # History of marks within files (newest to oldest):
 
 > /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
-	"	1	0
+	"	17	0
 	.	1	0
 	+	1354	41
 	+	1	0
 
-> /media/raid1-100-data1/Documents/github/dot_files/main.c
-	"	1	0
-
-> /media/raid1-100-data1/Documents/github/dot_files/.git/COMMIT_EDITMSG
-	"	6	25
-	^	6	26
-	.	6	25
-	+	6	25
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/lr35902
-	"	1	0
-
 > ~/.vimrc
-	"	32	1
-	^	32	1
-	.	32	0
-	+	58	31
-	+	64	0
-	+	63	0
-	+	59	0
-	+	60	0
-	+	62	0
-	+	63	0
-	+	64	0
-	+	65	36
-	+	66	0
-	+	126	0
-	+	122	0
-	+	124	0
-	+	121	0
-	+	19	0
-	+	18	17
-	+	124	20
-	+	123	0
-	+	124	0
-	+	126	0
-	+	124	0
-	+	112	0
-	+	186	0
-	+	260	0
-	+	124	0
-	+	73	24
-	+	124	0
-	+	73	0
-	+	72	0
-	+	124	18
+	"	268	0
+	^	20	0
+	.	20	0
+	+	132	0
+	+	130	0
+	+	118	0
+	+	192	0
+	+	266	0
+	+	130	0
+	+	79	24
+	+	130	0
+	+	79	0
+	+	78	0
+	+	130	18
 	+	19	15
-	+	124	18
-	+	122	0
+	+	130	18
+	+	128	0
 	+	18	0
-	+	124	18
+	+	130	18
 	+	19	0
-	+	165	15
-	+	163	0
-	+	164	0
+	+	171	15
+	+	169	0
+	+	170	0
 	+	3	0
 	+	3	0
-	+	124	20
+	+	130	20
 	+	18	0
 	+	19	0
-	+	124	18
-	+	72	0
+	+	130	18
+	+	78	0
 	+	18	0
 	+	20	16
-	+	47	22
-	+	50	23
-	+	47	0
-	+	67	29
-	+	69	30
-	+	124	18
-	+	120	1
-	+	122	0
-	+	124	19
+	+	53	22
+	+	56	23
+	+	53	0
+	+	73	29
+	+	75	30
+	+	130	18
+	+	126	1
+	+	128	0
+	+	130	19
 	+	18	0
-	+	124	18
+	+	130	18
 	+	21	0
 	+	22	0
 	+	18	0
@@ -296,20 +266,20 @@ $
 	+	19	0
 	+	20	0
 	+	22	0
-	+	124	31
-	+	124	31
-	+	125	24
-	+	126	20
-	+	124	0
-	+	125	0
-	+	33	0
+	+	130	31
+	+	130	31
+	+	131	24
+	+	132	20
+	+	130	0
+	+	131	0
+	+	39	0
 	+	23	0
 	+	24	0
 	+	25	0
 	+	26	0
 	+	27	0
 	+	28	31
-	+	126	12
+	+	132	12
 	+	29	0
 	+	28	0
 	+	27	0
@@ -327,31 +297,85 @@ $
 	+	30	0
 	+	31	0
 	+	32	0
+	+	33	0
+	+	34	0
+	+	39	0
+	+	35	0
+	+	36	0
+	+	33	0
+	+	37	0
+	+	38	0
+	+	258	0
+	+	259	34
+	+	33	0
+	+	34	0
+	+	35	0
+	+	36	0
+	+	37	0
+	+	38	0
+	+	20	0
+	+	132	18
+	+	20	0
 
 > ~/[Vundle] search
-	"	6	0
+	"	3	0
 	.	1	0
-	+	12077	0
-	+	12074	0
-	+	12071	0
-	+	8070	0
-	+	8067	0
-	+	8062	0
-	+	8059	0
-	+	4058	0
-	+	4056	0
-	+	4054	0
-	+	4051	0
-	+	4047	0
-	+	46	0
-	+	41	0
-	+	39	0
+	+	12116	0
+	+	12113	0
+	+	12110	0
+	+	8109	0
+	+	8106	0
+	+	8101	0
+	+	8098	0
+	+	4097	0
+	+	4095	0
+	+	4093	0
+	+	4090	0
+	+	4086	0
+	+	85	0
+	+	80	0
+	+	78	0
+	+	76	0
+	+	74	0
+	+	69	0
+	+	66	0
+	+	53	0
+	+	40	0
 	+	37	0
 	+	35	0
-	+	30	0
+	+	31	0
 	+	27	0
-	+	14	0
+	+	24	0
+	+	22	0
+	+	20	0
+	+	6	0
+	+	4	0
 	+	1	0
+
+> /media/raid1-100-data1/Documents/github/dot_files/.git/COMMIT_EDITMSG
+	"	6	10
+	^	6	11
+	.	6	10
+	+	6	10
+
+> /media/raid1-100-data1/Documents/github/dot_files/.gitignore
+	"	1	11
+	.	1	0
+	+	1	0
+
+> /media/raid1-100-data1/Documents/github/dot_files/vim_setup.sh
+	"	8	23
+	^	8	24
+	.	8	24
+	+	4	0
+	+	5	65
+	+	8	24
+
+> /media/raid1-100-data1/Documents/github/dot_files/main.c
+	"	1	0
+
+> /media/raid1-100-data1/Documents/tmp/gameboy/lr35902
+	"	1	0
 
 > ~/[Vundle] Installer
 	"	20	0
