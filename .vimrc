@@ -36,6 +36,9 @@ Plugin 'ctrlp.vim'
 "Plugin 'DarkZen-Color-Scheme'
 "Plugin 'Distinguished'
 "Plugin 'badwolf'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'tpope/vim-sleuth'
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -157,14 +160,14 @@ set noswapfile
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
-set expandtab
+"set expandtab
 
 " Be smart when using tabs ;)
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+"set shiftwidth=4
+"set tabstop=8
 
 " Linebreak on 500 characters
 "set lbr
