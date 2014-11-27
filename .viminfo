@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/80
+~MSle0~/Plugi
 
 # Last Substitute Search Pattern:
 ~MSle0&sdl
@@ -17,28 +17,33 @@
 $
 
 # Command Line History (newest to oldest):
-:q
 :wq
-:w
-:q!
-:bn
-:e test.txt
-:e tmp
-:CtrlP
-:.cc
-:e s1c2.go
-:colorscheme Mustang
+:q
 :PluginInstall
-:GoRun
-:PluginSearch sleuth
-:set list
-:set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-:set listchars=tab:\|\<Space>
+:q!
 :colorscheme custom_Mustang
-:PluginInstall edkolev/tmuxline.vim
-:PluginSearch tmuxline
+:colorscheme solarized
+:colorscheme ir_black
+:colorscheme Mustang
+:colorscheme desert
+:DelimitMateTest
+:w
+:let delimitMate_jump_expansion = 1
+:let delimitMate_expand_cr = 1
+:PluginSearch delimitmate
+:e hamming/hamming.go
+:e set1/set1.go
+:W
+:vsplit
+:e s1c1.go
+:bn
 
 # Search String History (newest to oldest):
+? \%^$
+?/jump
+?/Plugi
+?/smartin
+?/filetype
 ?/80
 ?/syntax
 ?/colorsch
@@ -54,11 +59,6 @@ $
 ?/colorscheme
 ?/cand
 ?/g:solarized
-?/colorsc	
-?/Plugin
-?/256
-?/Sola
-?/showma}}}
 
 # Expression History (newest to oldest):
 
@@ -67,167 +67,188 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
-		//input_str := string(input)
-"1	LINE	0
-		//input_str := string(input)
+"0	LINE	0
+	Plugin 'delimitMate.vim'
+""1	LINE	0
+	let delimitMate_jump_expansion = 1
 "2	LINE	0
-		//input, _ := ioutil.ReadAll(os.Stdin)
+	let delimitMate_jump_expansion = 1
 "3	LINE	0
-		//"os"
-"4	LINE	0
-		//"io/ioutil"
-"5	LINE	0
-		"encoding/base64"
-"6	LINE	0
-	let g:airline_separator = 0
-"7	LINE	0
-	Plugin 'Gentooish'
-"8	LINE	0
-	Plugin 'candy.vim'
-"9	LINE	0
 	
+"4	LINE	0
+		//fmt.Println(min_key_size)
+		/*
+			for key_len := 2; key_len < 40; key_len++ {
+	
+	
+	
+	
+			min_min_score := 10.0
+			min_min_key := make([]byte, 1)
+			var min_min_input []byte
+	
+			scanner := bufio.NewScanner(file)
+			for scanner.Scan() {
+				input, _ := hex.DecodeString(scanner.Text())
+	
+				min_score := 10.0
+				min_key := make([]byte, 1)
+	
+				for i := 0x00; i < 0x100; i++ {
+					key[0] = byte(i)
+					xored := set1.XorKey(input, key)
+					hist := set1.ComputeHist(xored)
+					score := set1.ComputeScore(set1.Eng_freq, hist)
+					if score < min_score {
+						min_score = score
+						copy(min_key, key)
+					}
+				}
+				if min_score < min_min_score {
+					min_min_score = min_score
+					min_min_key = min_key
+					min_min_input = input
+				}
+			}
+	
+			fmt.Println(string(set1.XorKey(min_min_input, min_min_key)))
+		*/
+"5	LINE	0
+	
+"6	LINE	0
+		//key := make([]byte, 1)
+"7	LINE	0
+	
+"8	LINE	0
+		fmt.Println(hamming.DistByteSlice([]byte(a_str), []byte(b_str)))
+"9	LINE	0
+		b_str := "wokka wokka!!!"
 "q	CHAR	0
 	;
 "-	CHAR	0
-		
+	s
 
 # File marks:
-'0  1  0  /media/raid1-100-data1/Documents/github/dot_files/.git/MERGE_MSG
-'1  27  0  ~/.vimrc
-'2  177  32  ~/.vimrc
-'3  20  95  ~/.vimrc
-'4  178  32  ~/.vimrc
-'5  15  86  ~/test
-'6  30  0  ~/.vimrc
-'7  1  0  ~/.vimrc
-'8  1  0  ~/Desktop/todo.txt
-'9  1  78  ~/test.txt
+'0  1  0  ~/.vimrc
+'1  43  27  ~/.vimrc
+'2  22  0  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
+'3  24  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+'4  44  0  ~/.vimrc
+'5  18  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+'6  15  10  /media/raid1-100-data1/Documents/tmp/matasano/go/hamming/hamming.go
+'7  19  30  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c4.go
+'8  8  0  /mnt/nya/lvl/lvl0
+'9  1  0  /media/raid1-100-data1/Documents/github/dot_files/.git/MERGE_MSG
 
 # Jumplist (newest first):
+-'  1  0  ~/.vimrc
+-'  43  27  ~/.vimrc
+-'  63  0  ~/.vimrc
+-'  59  0  ~/.vimrc
+-'  44  0  ~/.vimrc
+-'  13  0  ~/.vimrc
+-'  10  0  ~/.vimrc
+-'  4  0  ~/.vimrc
+-'  2  0  ~/.vimrc
+-'  22  0  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
+-'  15  0  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
+-'  10  0  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
+-'  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
+-'  24  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+-'  18  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+-'  13  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+-'  11  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+-'  2  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+-'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+-'  12  0  ~/.vimrc
+-'  274  0  ~/.vimrc
+-'  85  0  ~/.vimrc
+-'  78  0  ~/.vimrc
+-'  73  0  ~/.vimrc
+-'  42  0  ~/.vimrc
+-'  89  0  ~/.vimrc
+-'  92  0  ~/.vimrc
+-'  96  0  ~/.vimrc
+-'  99  0  ~/.vimrc
+-'  102  0  ~/.vimrc
+-'  106  0  ~/.vimrc
+-'  109  0  ~/.vimrc
+-'  112  0  ~/.vimrc
+-'  115  0  ~/.vimrc
+-'  118  0  ~/.vimrc
+-'  121  0  ~/.vimrc
+-'  124  0  ~/.vimrc
+-'  127  0  ~/.vimrc
+-'  130  0  ~/.vimrc
+-'  136  0  ~/.vimrc
+-'  141  0  ~/.vimrc
+-'  149  0  ~/.vimrc
+-'  152  0  ~/.vimrc
+-'  155  0  ~/.vimrc
+-'  163  0  ~/.vimrc
+-'  169  0  ~/.vimrc
+-'  172  0  ~/.vimrc
+-'  176  0  ~/.vimrc
+-'  183  0  ~/.vimrc
+-'  185  0  ~/.vimrc
+-'  3  0  ~/.vimrc
+-'  49  1  ~/.vimrc
+-'  47  0  ~/.vimrc
+-'  184  4  ~/.vimrc
+-'  25  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+-'  43  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+-'  45  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+-'  56  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+-'  26  1  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+-'  15  10  /media/raid1-100-data1/Documents/tmp/matasano/go/hamming/hamming.go
+-'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/set1/set1.go
+-'  14  6  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c5.go
+-'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c1.go
+-'  7  16  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+-'  19  30  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c4.go
+-'  6  1  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c4.go
+-'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c4.go
+-'  8  0  /mnt/nya/lvl/lvl0
+-'  1  1  /mnt/nya/lvl/lvl0
 -'  1  0  /media/raid1-100-data1/Documents/github/dot_files/.git/MERGE_MSG
 -'  27  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  177  32  ~/.vimrc
+-'  182  32  ~/.vimrc
 -'  28  0  ~/.vimrc
 -'  6  0  ~/.vimrc
 -'  20  95  ~/.vimrc
--'  178  32  ~/.vimrc
 -'  15  86  ~/test
 -'  1  0  ~/test
--'  105  0  ~/.vimrc
--'  102  0  ~/.vimrc
--'  98  0  ~/.vimrc
--'  95  0  ~/.vimrc
--'  92  0  ~/.vimrc
--'  88  0  ~/.vimrc
--'  85  0  ~/.vimrc
--'  81  0  ~/.vimrc
--'  77  0  ~/.vimrc
--'  72  0  ~/.vimrc
--'  62  0  ~/.vimrc
--'  58  0  ~/.vimrc
--'  50  0  ~/.vimrc
+-'  110  0  ~/.vimrc
+-'  107  0  ~/.vimrc
+-'  103  0  ~/.vimrc
+-'  100  0  ~/.vimrc
+-'  97  0  ~/.vimrc
+-'  93  0  ~/.vimrc
+-'  90  0  ~/.vimrc
+-'  86  0  ~/.vimrc
+-'  82  0  ~/.vimrc
+-'  74  0  ~/.vimrc
+-'  64  0  ~/.vimrc
+-'  60  0  ~/.vimrc
+-'  52  0  ~/.vimrc
 -'  30  0  ~/.vimrc
 -'  1  0  ~/Desktop/todo.txt
 -'  1  78  ~/test.txt
--'  1  0  ~/tmp
--'  176  0  ~/.vimrc
--'  8  35  /media/raid1-100-data1/Documents/tmp/matasano/README.md
--'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/README.md
--'  13  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c1.go
--'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c2.go
--'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c1.go
--'  19  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c2.go
--'  10  1  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c2.go
--'  8  24  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c2.go
--'  11  14  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c2.go
--'  10  0  /media/raid1-100-data1/Documents/tmp/matasano/go/s1c1.go
--'  183  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
--'  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
--'  78  0  ~/.vimrc
--'  12  0  ~/.vimrc
--'  76  0  ~/.vimrc
--'  42  20  ~/.vimrc
--'  41  0  ~/.vimrc
--'  7  0  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
--'  1  0  /media/raid1-100-data1/Documents/tmp/golang/echo_server.go
--'  86  1  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
--'  12  6  /media/raid1-100-data1/Documents/tmp/tuenti/1/1.py
--'  14  7  /media/raid1-100-data1/Documents/tmp/tuenti/1/1.py
--'  1  0  /media/raid1-100-data1/Documents/tmp/tuenti/1/1.py
--'  54  37  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
--'  40  0  ~/.vimrc
--'  52  0  ~/.vimrc
--'  55  0  ~/.vimrc
--'  9  0  ~/.vimrc
--'  274  0  ~/.vimrc
--'  21  0  ~/.vimrc
--'  37  0  ~/.vimrc
--'  539  2  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
--'  33  1  ~/.vimrc
--'  136  12  ~/.vimrc
--'  2  0  ~/.vimrc
--'  7  0  ~/.vimrc
--'  29  30  ~/.vimrc
--'  135  0  ~/.vimrc
--'  134  39  ~/.vimrc
--'  23  0  ~/.vimrc
--'  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
--'  60  22  ~/.vimrc
--'  22  0  ~/.vimrc
--'  14  0  ~/.vimrc
--'  18  0  ~/.vimrc
--'  130  1  ~/.vimrc
--'  129  9  ~/.vimrc
--'  80  0  ~/.vimrc
--'  43  14  ~/.vimrc
--'  51  3  ~/.vimrc
--'  53  3  ~/.vimrc
--'  56  15  ~/.vimrc
--'  59  2  ~/.vimrc
--'  46  40  ~/.vimrc
--'  82  0  ~/.vimrc
--'  141  13  ~/.vimrc
--'  133  28  ~/.vimrc
--'  83  17  ~/.vimrc
--'  19  0  ~/.vimrc
--'  3  0  ~/.vimrc
--'  174  0  ~/.vimrc
--'  167  0  ~/.vimrc
--'  164  0  ~/.vimrc
--'  158  0  ~/.vimrc
--'  150  0  ~/.vimrc
--'  147  0  ~/.vimrc
--'  144  0  ~/.vimrc
--'  131  0  ~/.vimrc
--'  125  0  ~/.vimrc
--'  122  0  ~/.vimrc
+-'  1  0  /tmp/gameboy/main.c
+-'  22  0  /tmp/gameboy/main.c
+-'  24  0  /tmp/gameboy/main.c
+-'  54  0  /tmp/gameboy/main.c
 
 # History of marks within files (newest to oldest):
 
-> /media/raid1-100-data1/Documents/github/dot_files/.git/MERGE_MSG
-	"	1	0
-
 > ~/.vimrc
-	"	27	0
-	^	177	33
-	.	177	32
-	+	134	18
-	+	82	0
+	"	1	0
+	^	43	28
+	.	43	28
+	+	137	0
+	+	139	19
 	+	18	0
-	+	21	16
-	+	57	22
-	+	60	23
-	+	57	0
-	+	77	29
-	+	79	30
-	+	134	18
-	+	130	1
-	+	132	0
-	+	134	19
-	+	18	0
-	+	134	18
+	+	139	18
 	+	22	0
 	+	23	0
 	+	18	0
@@ -238,20 +259,20 @@ $
 	+	19	0
 	+	21	0
 	+	23	0
-	+	134	31
-	+	134	31
-	+	135	24
-	+	136	20
-	+	134	0
-	+	135	0
-	+	43	0
+	+	139	31
+	+	139	31
+	+	140	24
+	+	141	20
+	+	139	0
+	+	140	0
+	+	45	0
 	+	24	0
 	+	25	0
 	+	26	0
 	+	27	0
 	+	28	0
 	+	29	31
-	+	136	12
+	+	141	12
 	+	30	0
 	+	29	0
 	+	28	0
@@ -271,14 +292,14 @@ $
 	+	33	0
 	+	34	0
 	+	35	0
-	+	43	0
+	+	45	0
 	+	36	0
 	+	37	0
 	+	34	0
 	+	38	0
 	+	39	0
-	+	264	0
-	+	265	34
+	+	269	0
+	+	270	34
 	+	34	0
 	+	35	0
 	+	36	0
@@ -286,33 +307,455 @@ $
 	+	38	0
 	+	39	0
 	+	21	0
-	+	136	18
+	+	141	18
 	+	21	0
-	+	131	0
+	+	136	0
 	+	40	0
-	+	171	12
-	+	164	0
-	+	167	0
-	+	170	0
-	+	171	0
-	+	167	0
+	+	176	12
+	+	169	0
+	+	172	0
+	+	175	0
+	+	176	0
+	+	172	0
 	+	40	0
 	+	41	0
-	+	43	0
+	+	45	0
 	+	42	20
 	+	40	0
-	+	77	0
-	+	69	0
-	+	70	0
+	+	82	0
 	+	71	0
-	+	74	0
-	+	75	0
+	+	72	0
+	+	73	0
 	+	76	0
-	+	176	1
-	+	177	17
-	+	178	32
+	+	77	0
+	+	78	0
+	+	181	1
+	+	182	17
+	+	183	32
 	+	20	95
-	+	177	32
+	+	182	32
+	+	185	0
+	+	42	0
+	+	44	0
+	+	79	28
+	+	82	33
+	+	80	31
+	+	82	0
+	+	79	0
+	+	81	0
+	+	42	0
+	+	43	28
+
+> ~/[Vundle] Installer
+	"	14	0
+	.	1	0
+	+	176	0
+	+	170	0
+	+	163	0
+	+	156	0
+	+	139	0
+	+	122	0
+	+	105	0
+	+	88	0
+	+	71	0
+	+	52	0
+	+	42	0
+	+	39	0
+	+	27	0
+	+	14	0
+	+	1	0
+
+> /tmp/gameboy/main.c
+	"	1	0
+	^	22	1
+	.	21	0
+	+	1	13
+	+	1	20
+	+	1	20
+	+	1	7
+	+	1	8
+	+	1	8
+	+	1	9
+	+	1	15
+	+	1	13
+	+	1	20
+	+	1	20
+	+	1	7
+	+	1	8
+	+	1	8
+	+	1	9
+	+	1	15
+	+	1	13
+	+	1	20
+	+	1	20
+	+	1	7
+	+	1	8
+	+	1	8
+	+	1	9
+	+	1	15
+	+	1	13
+	+	1	20
+	+	1	20
+	+	1	7
+	+	1	8
+	+	1	8
+	+	1	9
+	+	1	15
+	+	1	13
+	+	1	20
+	+	1	20
+	+	1	7
+	+	1	8
+	+	1	8
+	+	1	9
+	+	1	15
+	+	1	13
+	+	1	20
+	+	1	20
+	+	1	0
+	+	1	12
+	+	1	0
+	+	1	7
+	+	1	8
+	+	1	8
+	+	1	9
+	+	1	15
+	+	1	13
+	+	1	20
+	+	1	20
+	+	1	7
+	+	1	8
+	+	1	8
+	+	1	9
+	+	1	15
+	+	1	13
+	+	1	20
+	+	1	20
+	+	1	7
+	+	1	8
+	+	1	8
+	+	1	9
+	+	1	15
+	+	1	13
+	+	1	20
+	+	1	20
+	+	1	7
+	+	1	8
+	+	1	8
+	+	1	9
+	+	1	15
+	+	1	13
+	+	1	20
+	+	1	20
+	+	1	7
+	+	1	8
+	+	1	8
+	+	1	9
+	+	1	15
+	+	1	13
+	+	1	20
+	+	1	20
+	+	1	7
+	+	1	8
+	+	1	8
+	+	1	9
+	+	1	15
+	+	1	13
+	+	1	20
+	+	1	20
+	+	1	0
+	+	121	0
+	+	20	12
+	+	23	0
+	+	20	13
+	+	21	0
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/s1c6.go
+	"	19	1
+	^	19	2
+	.	19	0
+	+	1	0
+	+	1	0
+	+	6	7
+	+	17	29
+	+	28	2
+	+	24	26
+	+	17	9
+	+	24	31
+	+	25	10
+	+	1	0
+	+	23	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	17	30
+	+	1	0
+	+	24	0
+	+	1	0
+	+	28	0
+	+	28	0
+	+	35	0
+	+	34	0
+	+	32	0
+	+	12	0
+	+	12	39
+	+	12	0
+	+	12	27
+	+	12	0
+	+	12	20
+	+	12	37
+	+	12	0
+	+	12	31
+	+	12	27
+	+	12	2
+	+	12	0
+	+	12	0
+	+	12	36
+	+	12	36
+	+	12	0
+	+	12	10
+	+	16	0
+	+	15	26
+	+	15	59
+	+	15	2
+	+	58	2
+	+	15	59
+	+	6	2
+	+	8	2
+	+	9	2
+	+	12	31
+	+	12	10
+	+	4	2
+	+	12	2
+	+	12	0
+	+	12	11
+	+	12	41
+	+	12	0
+	+	5	11
+	+	15	24
+	+	15	0
+	+	28	0
+	+	1	0
+	+	37	0
+	+	46	0
+	+	26	5
+	+	26	0
+	+	18	6
+	+	19	0
+
+> /media/raid1-100-data1/Documents/tmp/gameboy/main.c
+	"	20	6
+	^	20	7
+	.	20	7
+	+	34	0
+	+	28	0
+	+	29	0
+	+	31	0
+	+	30	30
+	+	32	14
+	+	34	18
+	+	34	34
+	+	34	41
+	+	34	63
+	+	34	79
+	+	34	96
+	+	34	103
+	+	34	121
+	+	34	138
+	+	34	0
+	+	37	0
+	+	21	23
+	+	22	0
+	+	20	7
+
+> ~/[Vundle] search
+	"	3	0
+	.	1	0
+	+	12123	0
+	+	12120	0
+	+	12117	0
+	+	8116	0
+	+	8113	0
+	+	8108	0
+	+	8105	0
+	+	4104	0
+	+	4102	0
+	+	4100	0
+	+	4097	0
+	+	4093	0
+	+	92	0
+	+	87	0
+	+	85	0
+	+	83	0
+	+	81	0
+	+	76	0
+	+	73	0
+	+	60	0
+	+	47	0
+	+	44	0
+	+	42	0
+	+	38	0
+	+	34	0
+	+	31	0
+	+	29	0
+	+	27	0
+	+	13	0
+	+	11	0
+	+	8	0
+	+	6	0
+	+	4	0
+	+	1	0
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/s1c1.go
+	"	1	0
+	^	8	3
+	.	1	0
+	+	11	13
+	+	11	13
+	+	11	13
+	+	11	13
+	+	18	20
+	+	18	20
+	+	19	0
+	+	12	108
+	+	16	34
+	+	18	20
+	+	19	0
+	+	1	0
+	+	8	11
+	+	12	3
+	+	13	39
+	+	14	26
+	+	16	36
+	+	17	10
+	+	1	0
+	+	1	0
+	+	12	12
+	+	1	0
+	+	1	0
+	+	14	2
+	+	13	2
+	+	12	1
+	+	7	2
+	+	1	0
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/ControlP
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/6.txt
+	"	1	0
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/s1c5.go
+	"	14	6
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/set1/set1.go
+	"	1	0
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/hamming/hamming.go
+	"	15	10
+	^	15	11
+	.	1	0
+	+	1	15
+	+	2	0
+	+	3	0
+	+	6	0
+	+	9	20
+	+	10	26
+	+	6	7
+	+	7	0
+	+	5	28
+	+	9	29
+	+	13	36
+	+	1	0
+	+	13	5
+	+	1	0
+	+	1	0
+	+	17	8
+	+	15	7
+	+	1	0
+	+	9	8
+	+	13	8
+	+	1	0
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/s1c4.go
+	"	19	30
+	^	19	31
+	.	19	30
+	+	12	32
+	+	11	14
+	+	12	0
+	+	11	0
+	+	14	27
+	+	17	21
+	+	14	27
+	+	15	22
+	+	17	33
+	+	19	0
+	+	18	0
+	+	19	25
+	+	1	0
+	+	5	0
+	+	19	30
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/s1c2.go
+	"	1	0
+	^	13	9
+	.	1	0
+	+	17	53
+	+	18	53
+	+	17	12
+	+	18	8
+	+	20	39
+	+	21	38
+	+	1	0
+	+	22	31
+	+	23	39
+	+	1	0
+	+	4	0
+	+	6	0
+	+	1	0
+	+	8	8
+	+	22	11
+	+	14	0
+	+	9	0
+	+	8	29
+	+	9	25
+	+	12	1
+	+	11	5
+	+	10	16
+	+	11	14
+	+	8	31
+	+	1	0
+	+	1	0
+	+	1	0
+	+	19	0
+	+	1	0
+
+> /media/raid1-100-data1/Documents/tmp/matasano/python/set2/10.txt
+	"	1	0
+
+> /mnt/nya/lvl/lvl0
+	"	8	0
+	.	8	0
+	+	8	32
+	+	8	0
+
+> /media/raid1-100-data1/Documents/github/dot_files/.git/MERGE_MSG
+	"	1	0
 
 > ~/test
 	"	15	86
@@ -365,78 +808,6 @@ $
 	.	8	35
 	+	8	35
 
-> /media/raid1-100-data1/Documents/tmp/matasano/go/s1c1.go
-	"	13	0
-	^	8	3
-	.	1	0
-	+	11	13
-	+	11	13
-	+	11	13
-	+	11	13
-	+	18	20
-	+	18	20
-	+	19	0
-	+	12	108
-	+	16	34
-	+	18	20
-	+	19	0
-	+	1	0
-	+	8	11
-	+	12	3
-	+	13	39
-	+	14	26
-	+	16	36
-	+	17	10
-	+	1	0
-	+	1	0
-	+	12	12
-	+	1	0
-	+	1	0
-	+	14	2
-	+	13	2
-	+	12	1
-	+	7	2
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/s1c2.go
-	"	1	0
-	^	13	9
-	.	1	0
-	+	17	53
-	+	18	53
-	+	17	12
-	+	18	8
-	+	20	39
-	+	21	38
-	+	1	0
-	+	22	31
-	+	23	39
-	+	1	0
-	+	4	0
-	+	6	0
-	+	1	0
-	+	8	8
-	+	22	11
-	+	14	0
-	+	9	0
-	+	8	29
-	+	9	25
-	+	12	1
-	+	11	5
-	+	10	16
-	+	11	14
-	+	8	31
-	+	1	0
-	+	1	0
-	+	1	0
-	+	19	0
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/ControlP
-	"	1	0
-	.	1	0
-	+	1	0
-
 > /media/raid1-100-data1/Documents/tmp/matasano/go/test
 	"	1	0
 	^	1	0
@@ -472,24 +843,6 @@ $
 	+	2	0
 	+	1	14
 
-> ~/[Vundle] Installer
-	"	14	0
-	.	1	0
-	+	163	0
-	+	157	0
-	+	150	0
-	+	143	0
-	+	126	0
-	+	109	0
-	+	92	0
-	+	75	0
-	+	58	0
-	+	39	0
-	+	29	0
-	+	26	0
-	+	14	0
-	+	1	0
-
 > /media/raid1-100-data1/Documents/tmp/golang/fibs.go
 	"	20	0
 	^	20	1
@@ -507,43 +860,6 @@ $
 	+	14	0
 	+	13	0
 	+	12	4
-
-> ~/[Vundle] search
-	"	3	0
-	.	1	0
-	+	12120	0
-	+	12117	0
-	+	12114	0
-	+	8113	0
-	+	8110	0
-	+	8105	0
-	+	8102	0
-	+	4101	0
-	+	4099	0
-	+	4097	0
-	+	4094	0
-	+	4090	0
-	+	89	0
-	+	84	0
-	+	82	0
-	+	80	0
-	+	78	0
-	+	73	0
-	+	70	0
-	+	57	0
-	+	44	0
-	+	41	0
-	+	39	0
-	+	35	0
-	+	31	0
-	+	28	0
-	+	26	0
-	+	24	0
-	+	10	0
-	+	8	0
-	+	5	0
-	+	3	0
-	+	1	0
 
 > /tmp/vbgx3Ie/8
 	"	1	0
@@ -602,28 +918,6 @@ $
 > /media/raid1-100-data1/Documents/tmp/gameboy/dmg.c
 	"	1	0
 
-> /media/raid1-100-data1/Documents/tmp/gameboy/main.c
-	"	49	4
-	^	34	0
-	.	34	0
-	+	31	0
-	+	25	0
-	+	26	0
-	+	28	0
-	+	27	30
-	+	29	14
-	+	31	18
-	+	31	34
-	+	31	41
-	+	31	63
-	+	31	79
-	+	31	96
-	+	31	103
-	+	31	121
-	+	31	138
-	+	31	0
-	+	34	0
-
 > /tmp/vzMY02e/0
 	"	1	0
 
@@ -663,9 +957,6 @@ $
 
 > /usr/share/vim/vim74/syntax/colortest.vim
 	"	52	0
-
-> /tmp/gameboy/main.c
-	"	1	0
 
 > ~/.vim/bundle/Vundle.vim/doc/vundle.txt
 	"	1	0

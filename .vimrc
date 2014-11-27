@@ -39,6 +39,8 @@ Plugin 'ctrlp.vim'
 "Plugin 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-sleuth'
 Plugin 'fatih/vim-go'
+"Plugin 'delimitMate.vim'
+Plugin 'Raimondi/delimitMate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -74,6 +76,9 @@ let g:airline_enable_branch     = 1
 "let g:airline_right_sep = '◀'
 "let g:airline_symbols.branch = '⎇'
 
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+let delimitMate_jump_expansion = 1
 """"""""""""""""""""""""""""""
 " End of Plugins configuration
 """"""""""""""""""""""""""""""
@@ -177,7 +182,7 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=235
 
 set autoindent "Auto indent
-set smartindent "Smart indent
+"set smartindent "Smart indent
 set wrap "Wrap lines
 
 """"""""""""""""""""""""""""""
