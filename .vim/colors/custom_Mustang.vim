@@ -42,7 +42,7 @@ hi String 	guifg=#b1d631 gui=italic ctermfg=148
 hi Identifier 	guifg=#b1d631 gui=none ctermfg=148
 hi Function 	guifg=#ffffff gui=bold ctermfg=255
 hi Type 	guifg=#7e8aa2 gui=none ctermfg=103
-hi Statement 	guifg=#8787ff gui=none ctermfg=105:q
+hi Statement 	guifg=#8787ff gui=none ctermfg=105
 hi Keyword	guifg=#ff9800 gui=none ctermfg=208
 hi Constant 	guifg=#ff5faf gui=none  ctermfg=205
 hi Number	guifg=#afafff gui=none ctermfg=147
@@ -54,4 +54,5 @@ hi Todo         guifg=#000000 guibg=#e6ea50 gui=italic
 hi pythonOperator guifg=#7e8aa2 gui=none ctermfg=103
 
 "hi Search     guifg=white	guibg=NONE	cterm=NONE	gui=underline
-hi Search     guibg=#808080	ctermbg=244
+"hi Search     guibg=#808080	ctermbg=244
+hi Search     guibg=#808080	ctermbg=134
