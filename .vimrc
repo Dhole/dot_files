@@ -15,17 +15,21 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 "Plugin 'git://git.wincent.com/command-t.git'
+"Color Scheme
 Plugin 'Solarized' 
 "Plugin 'BusyBee'
+"Color Scheme
 Plugin 'Mustang2'
 Plugin 'TagHighlight'
-Plugin 'bandit.vim'
+"Color Scheme
+Plugin 'bandit.vim' 
 "Plugin 'molokai'
 "Plugin 'tir_black'
 "Plugin 'jellybeans.vim'
 "Plugin 'wombat256.vim'
 "Plugin 'Railscasts-Theme-GUIand256color'
 "Plugin 'yearofmoo/Vim-Darkmate'
+"Full path fuzzy file, buffer, mru, tag, ... finder
 Plugin 'ctrlp.vim'
 "Plugin 'darktango.vim'
 "Plugin 'tangoshady'
@@ -37,9 +41,14 @@ Plugin 'ctrlp.vim'
 "Plugin 'Distinguished'
 "Plugin 'badwolf'
 "Plugin 'edkolev/tmuxline.vim'
+"Automatically adjust shiftwidth and expand tab based on current file
 Plugin 'tpope/vim-sleuth'
+"Go plugins
 Plugin 'fatih/vim-go'
+"Rust plugins
+Plugin 'wting/rust.vim'
 "Plugin 'delimitMate.vim'
+"Auto close quotes, parenthesis, brackets, etc.
 Plugin 'Raimondi/delimitMate'
 
 " All of your Plugins must be added before the following line
@@ -78,7 +87,7 @@ let g:airline_enable_branch     = 1
 
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
-let delimitMate_jump_expansion = 1
+"let delimitMate_jump_expansion = 1
 """"""""""""""""""""""""""""""
 " End of Plugins configuration
 """"""""""""""""""""""""""""""
