@@ -16,13 +16,13 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 "Plugin 'git://git.wincent.com/command-t.git'
 "Color Scheme
-Plugin 'Solarized' 
+Plugin 'Solarized'
 "Plugin 'BusyBee'
 "Color Scheme
 Plugin 'Mustang2'
 Plugin 'TagHighlight'
 "Color Scheme
-Plugin 'bandit.vim' 
+Plugin 'bandit.vim'
 "Plugin 'molokai'
 "Plugin 'tir_black'
 "Plugin 'jellybeans.vim'
@@ -50,6 +50,9 @@ Plugin 'wting/rust.vim'
 "Plugin 'delimitMate.vim'
 "Auto close quotes, parenthesis, brackets, etc.
 Plugin 'Raimondi/delimitMate'
+"Shows git diff in the sign column
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -73,8 +76,10 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""
 " airline
 """"""""""""""""""""""""""""""
-let g:airline_theme             = 'powerlineish'
+let g:airline_theme             = 'kolor'
 let g:airline_enable_branch     = 1
+let g:airline#extensions#whitespace#enabled = 0
+"let g:airline#extensions#tabline#enabled = 1
 "let g:airline_enable_syntastic  = 1
 "if !exists('g:airline_symbols')
 "  let g:airline_symbols = {}
@@ -88,6 +93,11 @@ let g:airline_enable_branch     = 1
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 "let delimitMate_jump_expansion = 1
+
+" NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""
 " End of Plugins configuration
 """"""""""""""""""""""""""""""
@@ -114,9 +124,9 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 " Ignore case when searching
-"set ignorecase
+set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
@@ -224,7 +234,9 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
+autocmd BufWrite *.c :call DeleteTrailingWS()
+autocmd BufWrite *.cpp :call DeleteTrailingWS()
+autocmd BufWrite *.h :call DeleteTrailingWS()
 
 " Returns true if paste mode is enabled
 function! HasPaste()
