@@ -198,7 +198,7 @@ set smarttab
 "set tw=500
 "set textwidth=80
 set colorcolumn=80
-highlight ColorColumn ctermbg=235
+highlight ColorColumn ctermbg=235 guibg=#262626
 
 set autoindent "Auto indent
 "set smartindent "Smart indent
@@ -288,6 +288,7 @@ nnoremap <silent> <C-t> :tabnew<CR>
 
 set cursorline " highlight current line
 hi CursorLine term=NONE cterm=none
+hi Cursor term=reverse cterm=reverse gui=reverse guibg=NONE guifg=NONE
 
 set ttyfast                   " we have a fast terminal
 set undolevels=1000           " 1000 undos
@@ -297,3 +298,14 @@ set sidescrolloff=5           " keep at least 5 lines left/right
 set showmode
 " nore , ;
 " nore . :
+
+" Gui stuff
+if has('gui_running')
+  set guifont=Ubuntu\ Mono\ 11
+endif
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
+:set guioptions-=L  "remove left-hand scroll bar
+:set guioptions-=M
+

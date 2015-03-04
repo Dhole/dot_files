@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/whitespace
+~MSle0~/asd
 
 # Last Substitute Search Pattern:
 ~MSle0&        
@@ -19,6 +19,35 @@ $
 # Command Line History (newest to oldest):
 :q
 :w
+:wq
+:'<,'>!
+:Q
+:q!
+::q
+:qw
+:vsplit
+:e lr35902.c
+:Glog
+:Gstatus
+:Gdiff
+:e .Xresources
+:e .i3/config
+:e .config/xfce4/terminal/accels.scm
+:e .i3//config
+:e .bashrc
+:e github/dot_files/.bashrc
+:split
+:e tmp
+:e github/dot_files/.conkyrc
+:e .conkyrc
+:W
+:set guifont?
+:set
+:hi Cursor gui=reverse guibg=NONE guifg=NONE
+:'<,'>q
+:q:q!
+:q:q:q
+:e 50-touchpad.conf.bak
 :e memory.c
 :e main.c
 :AirlineToggleWhitespace
@@ -39,9 +68,40 @@ $
 :AirlineTheme solarized
 
 # Search String History (newest to oldest):
+?/asd
+?/Cons
+?/self.lis
+?/session
+?/dht
+?/directory
+?/oo
+? \s\+$
+? \%(^parent\)\@<! 
+?/synda
+?/i3-sen
+?/border
+?/terminal
+?/xscr
+?/f6
+?/xscre
+?/workspace_la
+?/layout
+?/new_window
+?/none
+?/;
+?/bar
+?/title
+?/pixel
+?/lock
+?/load-module module-alsa-sink
+?/sysdefault
+?/sink
+?/gui
+?/cursor
+?/xfce
+?/LID
 ?/whitespace
 ?/airline
-? \s\+$
 ?/trailing
 ?/syntast
 ?         
@@ -50,7 +110,6 @@ $
 ?/search
 ?/trail
 ? \<go\>
-? \%(^parent\)\@<! 
 ?/D
 ?/DS-L
 ?/linus
@@ -67,192 +126,867 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
-	  let g:airline#extensions#whitespace#enabled = 1
-"1	LINE	0
-	let g:airline_symbols.whitespace = 'Ξ'
-"2	LINE	0
-	let g:airline_symbols.whitespace = 'Ξ'
-"3	LINE	0
-	let 
-"4	LINE	0
-	autocmd BufWrite *.coffee :call DeleteTrailingWS()
-"5	LINE	0
-						times[j] += float64(time.Since(start))
-"6	LINE	0
-						resp.Body.Close()
-"7	LINE	0
+"0	LINE	0
 	
-"8	LINE	0
-					start := time.Now()
-					resp, _ := http.Get(u)
-					times[j] += float64(time.Since(start))
-					//fmt.Println(times[j])
-					resp.Body.Close()
+	mod data_structures {
+	    pub struct LinkedList<T> {
+	        length: u32,
+	        list: Box<List<T>>,
+	    }
+	    enum List<T> {
+	        Cons(T, Box<List<T>>),
+	        Nil
+	    }
+	    impl<T> LinkedList<T> {
+	        pub fn new() -> LinkedList<T> {
+	            LinkedList { length: 0, list: Box::new(List::Nil) }
+	        }
+	        pub fn push(&mut self, elem: T) {
+	            self.length += 1;
+	            //self.list = Box::new(List::Nil);
+	            self.list = Box::new(List::Cons(elem, self.list));
+	        }
+	        /*
+	           fn pop(&mut self) -> T {
+	
+	           }
+	           */
+	        /*
+	        fn print(self) {
+	            match self.list {
+	                List::Cons(v, l) => { println!("{}", v); &l.print() },
+	                Nil => {},
+	            }
+	        }
+	        */
+	    }
+	
+	}
+	
+	use data_structures::LinkedList;
+	
+	fn main() {
+	    let mut l = LinkedList::<i32>::new();
+	    l.push(1);
+	    l.push(2);
+	    l.push(3);
+	    //l.print();
+	    println!("Hello, world!");
+	}
+""1	LINE	0
+	dhole.wha.la,87.223.114.111 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBP6/fe2MvsqFX4G5SfYruy5o8lSKi7hUzQMlRG6dJqWNuffZtvr6KHNudtckrWEGGA3B7J4WKaH62QMQn0DgHZU=
+"2	LINE	0
+	192.168.1.166 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBP6/fe2MvsqFX4G5SfYruy5o8lSKi7hUzQMlRG6dJqWNuffZtvr6KHNudtckrWEGGA3B7J4WKaH62QMQn0DgHZU=
+"3	LINE	0
+	
+"4	LINE	0
+	            self.list = Box::new(List::Cons(elem, new_list));
+"5	LINE	0
+	            self.list = Box::new(List::Nil);
+"6	LINE	0
+	            let new_list = self.list;
+"7	LINE	0
+	    let l
+"8	CHAR	0
+	struct List<T> {
+	        value: T,
+	        next: Box<Option<List<T>>>,
+	    }
 "9	LINE	0
-		"ioutil"
+	        right: Option<List<T>>,
+"a	CHAR	0
+	
+	  pastetoggle=<F2>
 "q	CHAR	0
 	;
 "-	CHAR	0
-	n
+	/
 
 # File marks:
-'0  97  9  ~/.vimrc
-'1  17  0  /media/raid1-100-data1/Documents/tmp/matasano/go/[Vundle] Installer
-'2  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/memory.c
-'3  33  0  /media/raid1-100-data1/Documents/tmp/matasano/go/[Vundle] Installer
-'4  3  0  /media/raid1-100-data1/Documents/tmp/gameboy/memory.c
-'5  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
-'6  51  17  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
-'7  83  35  ~/.vimrc
-'8  199  1  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
-'9  237  0  ~/.vimrc
+'0  1  0  ~/.ssh/known_hosts
+'1  28  11  ~/github/rust_learning/src/main.rs
+'2  5  0  ~/Documents/ADS/horspool.c
+'3  63  0  ~/Documents/ADS/bruteforce.c
+'4  4  0  ~/NERD_tree_1
+'5  1  0  ~/github/rust_learning/src/main.rs
+'6  1  41  ~/todo.txt
+'7  21  22  ~/.rtorrent.rc
+'8  73  72  ~/.rtorrent.rc
+'9  7  14  ~/tmp/rust/data_structures/src/main.rs
 
 # Jumplist (newest first):
--'  97  9  ~/.vimrc
+-'  1  0  ~/.ssh/known_hosts
+-'  28  11  ~/github/rust_learning/src/main.rs
+-'  10  8  ~/github/rust_learning/src/main.rs
+-'  46  0  ~/github/rust_learning/src/main.rs
+-'  52  0  ~/github/rust_learning/src/main.rs
+-'  1  0  ~/github/rust_learning/src/main.rs
+-'  26  8  ~/github/rust_learning/src/main.rs
+-'  21  66  ~/github/rust_learning/src/main.rs
+-'  19  14  ~/github/rust_learning/src/main.rs
+-'  3  16  ~/github/rust_learning/src/main.rs
+-'  2  0  ~/github/rust_learning/src/main.rs
+-'  51  29  ~/github/rust_learning/src/main.rs
+-'  22  67  ~/github/rust_learning/src/main.rs
+-'  18  28  ~/github/rust_learning/src/main.rs
+-'  5  0  ~/Documents/ADS/horspool.c
+-'  1  0  ~/Documents/ADS/horspool.c
+-'  63  0  ~/Documents/ADS/bruteforce.c
+-'  1  0  ~/Documents/ADS/bruteforce.c
+-'  4  0  ~/NERD_tree_1
+-'  5  0  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  40  0  ~/github/rust_learning/src/main.rs
+-'  42  0  ~/github/rust_learning/src/main.rs
+-'  44  0  ~/github/rust_learning/src/main.rs
+-'  1  41  ~/todo.txt
+-'  21  22  ~/.rtorrent.rc
+-'  24  29  ~/.rtorrent.rc
+-'  23  10  ~/.rtorrent.rc
+-'  1  0  ~/.rtorrent.rc
+-'  73  72  ~/.rtorrent.rc
+-'  74  28  ~/.rtorrent.rc
+-'  72  72  ~/.rtorrent.rc
+-'  71  9  ~/.rtorrent.rc
+-'  30  9  ~/.rtorrent.rc
+-'  20  10  ~/.rtorrent.rc
+-'  31  19  ~/.rtorrent.rc
+-'  28  10  ~/.rtorrent.rc
+-'  32  0  ~/.rtorrent.rc
+-'  7  14  ~/tmp/rust/data_structures/src/main.rs
+-'  13  0  ~/tmp/rust/data_structures/src/main.rs
+-'  1  0  ~/tmp/rust/data_structures/src/main.rs
+-'  23  0  ~/tmp/rust/data_structures/src/main.rs
+-'  1  13  /etc/ld.so.conf.d/local.conf
+-'  1  0  /etc/ld.so.conf
+-'  10  0  ~/.vimrc
 -'  1  0  ~/.vimrc
--'  17  0  /media/raid1-100-data1/Documents/tmp/matasano/go/[Vundle] Installer
--'  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/memory.c
--'  33  0  /media/raid1-100-data1/Documents/tmp/matasano/go/[Vundle] Installer
--'  3  0  /media/raid1-100-data1/Documents/tmp/gameboy/memory.c
--'  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
--'  64  14  /media/raid1-100-data1/Documents/tmp/gameboy/debugger.c
--'  314  2  /media/raid1-100-data1/Documents/tmp/gameboy/debugger.c
--'  29  0  /media/raid1-100-data1/Documents/tmp/gameboy/debugger.c
--'  26  0  /media/raid1-100-data1/Documents/tmp/gameboy/debugger.c
--'  79  6  ~/.vimrc
--'  77  2  ~/.vimrc
--'  15  18  ~/.vimrc
--'  51  17  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  83  35  ~/.vimrc
--'  35  42  /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.c
--'  44  9  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
--'  199  1  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
--'  169  2  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
--'  52  4  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
--'  36  11  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
--'  198  0  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
--'  237  0  ~/.vimrc
--'  231  12  ~/.vimrc
--'  230  9  ~/.vimrc
--'  45  0  ~/.vimrc
--'  94  16  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  362  3  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  255  1  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  246  1  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  202  1  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  193  1  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  157  3  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  512  3  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  158  42  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  529  26  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  511  21  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  430  16  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//8b491fa4638c4a962eb12e2d52888070b9fae616/screen.c
--'  1  0  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//8b491fa4638c4a962eb12e2d52888070b9fae616/screen.c
--'  257  2  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//7195f2b03468dd067b12ffaeb62f3f5ad15f9927/screen.c
--'  50  3  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//7195f2b03468dd067b12ffaeb62f3f5ad15f9927/screen.c
--'  536  0  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//7195f2b03468dd067b12ffaeb62f3f5ad15f9927/screen.c
--'  1  0  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//7195f2b03468dd067b12ffaeb62f3f5ad15f9927/screen.c
--'  2  0  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//7195f2b03468dd067b12ffaeb62f3f5ad15f9927/screen.c
--'  33  0  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//7195f2b03468dd067b12ffaeb62f3f5ad15f9927/screen.c
--'  34  7  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/.git/index
--'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/.git/COMMIT_EDITMSG
--'  8  0  /media/raid1-100-data1/Documents/tmp/matasano/.git/index
--'  19  0  /media/raid1-100-data1/Documents/tmp/matasano/.git/index
--'  18  0  /media/raid1-100-data1/Documents/tmp/matasano/.git/index
--'  17  0  /media/raid1-100-data1/Documents/tmp/matasano/.git/index
--'  16  0  /media/raid1-100-data1/Documents/tmp/matasano/.git/index
--'  15  0  /media/raid1-100-data1/Documents/tmp/matasano/.git/index
--'  14  0  /media/raid1-100-data1/Documents/tmp/matasano/.git/index
--'  13  0  /media/raid1-100-data1/Documents/tmp/matasano/.git/index
--'  1  0  fugitive:///media/raid1-100-data1/Documents/tmp/matasano/.git//d443a011c73d6ca4ea83211732cb452c94ebacb7/go/c7.go
--'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c7.go
--'  1  0  fugitive:///media/raid1-100-data1/Documents/tmp/matasano/.git//a8cfe4b4b60b5e8a7c00a6543eaa1e3bd721118f/go/c29.go
--'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c29.go
--'  60  0  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//f78674c384f3dd80bc5add94eef0e1dc6f34ede0/debugger.c
--'  1  0  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//f78674c384f3dd80bc5add94eef0e1dc6f34ede0/debugger.c
--'  5  6  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//f78674c384f3dd80bc5add94eef0e1dc6f34ede0/
--'  1  0  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//f78674c384f3dd80bc5add94eef0e1dc6f34ede0/
--'  1  7  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//f78674c384f3dd80bc5add94eef0e1dc6f34ede0
--'  2  9  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//7195f2b03468dd067b12ffaeb62f3f5ad15f9927
--'  1  0  fugitive:///media/raid1-100-data1/Documents/tmp/gameboy/.git//7195f2b03468dd067b12ffaeb62f3f5ad15f9927
--'  32  2  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  27  4  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  8  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  13  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  21  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  28  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  70  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  107  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  111  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  115  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  119  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  123  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  130  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  143  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  145  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  170  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  232  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  306  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  310  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  314  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  332  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  323  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  50  0  /media/raid1-100-data1/Documents/tmp/gameboy/screen.c
--'  62  1  /media/raid1-100-data1/Documents/tmp/matasano/go/c29.go
--'  48  0  /media/raid1-100-data1/Documents/tmp/matasano/go/[Vundle] Installer
--'  53  33  ~/.vimrc
--'  64  15  /media/raid1-100-data1/Documents/tmp/matasano/go/c29.go
--'  2  0  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
--'  42  12  /media/raid1-100-data1/Documents/tmp/matasano/go/c32.go
--'  1  0  /media/raid1-100-data1/Documents/tmp/gameboy/main.c
+-'  44  2  ~/.vimrc
+-'  230  0  ~/.vimrc
+-'  223  0  ~/.vimrc
+-'  229  0  ~/.vimrc
+-'  240  0  ~/.vimrc
+-'  248  0  ~/.vimrc
+-'  250  0  ~/.vimrc
+-'  253  0  ~/.vimrc
+-'  220  0  ~/.vimrc
+-'  214  0  ~/.vimrc
+-'  206  0  ~/.vimrc
+-'  202  0  ~/.vimrc
+-'  195  0  ~/.vimrc
+-'  191  0  ~/.vimrc
+-'  188  0  ~/.vimrc
+-'  182  0  ~/.vimrc
+-'  174  0  ~/.vimrc
+-'  171  0  ~/.vimrc
+-'  168  0  ~/.vimrc
+-'  160  0  ~/.vimrc
+-'  155  0  ~/.vimrc
+-'  149  0  ~/.vimrc
+-'  146  0  ~/.vimrc
+-'  143  0  ~/.vimrc
+-'  140  0  ~/.vimrc
+-'  137  0  ~/.vimrc
+-'  134  0  ~/.vimrc
+-'  131  0  ~/.vimrc
+-'  128  0  ~/.vimrc
+-'  125  0  ~/.vimrc
+-'  121  0  ~/.vimrc
+-'  118  0  ~/.vimrc
+-'  115  0  ~/.vimrc
+-'  111  0  ~/.vimrc
+-'  108  0  ~/.vimrc
+-'  104  0  ~/.vimrc
+-'  96  0  ~/.vimrc
+-'  93  0  ~/.vimrc
+-'  268  8  ~/.vimrc
+-'  42  21  ~/github/miniBoy/lr35902.c
+-'  268  0  ~/github/miniBoy/lr35902.c
+-'  1  0  ~/github/miniBoy/timer.c
+-'  1  0  ~/github/miniBoy/linenoise/linenoise.c
+-'  20  65  ~/github/miniBoy/screen.c
+-'  28  11  ~/github/rust_learning/src/main.rs
+-'  10  8  ~/github/rust_learning/src/main.rs
+-'  46  0  ~/github/rust_learning/src/main.rs
+-'  52  0  ~/github/rust_learning/src/main.rs
+-'  1  0  ~/github/rust_learning/src/main.rs
+-'  26  8  ~/github/rust_learning/src/main.rs
+-'  21  66  ~/github/rust_learning/src/main.rs
+-'  19  14  ~/github/rust_learning/src/main.rs
+-'  3  16  ~/github/rust_learning/src/main.rs
 
 # History of marks within files (newest to oldest):
 
+> ~/.ssh/known_hosts
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/github/rust_learning/src/main.rs
+	"	28	11
+	^	28	12
+	.	28	11
+	+	22	27
+	+	22	12
+	+	26	53
+	+	22	42
+	+	22	0
+	+	26	0
+	+	22	11
+	+	19	43
+	+	22	13
+	+	19	13
+	+	22	0
+	+	21	64
+	+	22	69
+	+	4	0
+	+	3	22
+	+	21	55
+	+	21	30
+	+	21	55
+	+	3	16
+	+	21	27
+	+	21	27
+	+	22	0
+	+	21	53
+	+	22	0
+	+	21	56
+	+	22	58
+	+	21	0
+	+	20	13
+	+	22	14
+	+	24	64
+	+	25	50
+	+	24	44
+	+	25	60
+	+	27	8
+	+	30	11
+	+	27	0
+	+	28	11
+
+> ~/Documents/ADS/horspool.c
+	"	5	0
+
+> ~/Documents/ADS/bruteforce.c
+	"	63	0
+
+> ~/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/todo.txt
+	"	1	41
+	^	1	42
+	.	1	41
+	+	1	57
+	+	4	0
+	+	1	0
+	+	3	0
+	+	1	0
+	+	4	0
+	+	1	41
+
+> ~/.rtorrent.rc
+	"	21	22
+	^	21	23
+	.	21	0
+	+	21	0
+	+	17	0
+	+	18	15
+	+	6	0
+	+	7	0
+	+	10	0
+	+	11	0
+	+	14	0
+	+	18	15
+	+	14	15
+	+	26	0
+	+	76	0
+	+	80	0
+	+	84	0
+	+	26	21
+	+	21	0
+
+> ~/tmp/rust/data_structures/src/main.rs
+	"	7	14
+	^	7	4
+	.	7	4
+	+	1	17
+	+	2	17
+	+	2	4
+	+	2	16
+	+	2	24
+	+	2	11
+	+	2	33
+	+	2	4
+	+	2	33
+	+	2	18
+	+	2	20
+	+	24	47
+	+	26	24
+	+	23	15
+	+	24	24
+	+	23	0
+	+	24	61
+	+	26	33
+	+	24	46
+	+	2	4
+	+	2	37
+	+	24	62
+	+	3	1
+	+	24	12
+	+	8	1
+	+	15	10
+	+	4	12
+	+	24	17
+	+	15	17
+	+	16	0
+	+	10	0
+	+	4	0
+	+	10	38
+	+	11	8
+	+	11	0
+	+	12	12
+	+	11	34
+	+	10	25
+	+	25	29
+	+	24	5
+	+	7	30
+	+	15	1
+	+	21	2
+	+	15	0
+	+	21	1
+	+	17	23
+	+	15	16
+	+	17	39
+	+	18	28
+	+	17	26
+	+	18	62
+	+	19	15
+	+	15	5
+	+	18	65
+	+	7	25
+	+	26	23
+	+	6	3
+	+	7	4
+
+> /etc/ld.so.conf.d/local.conf
+	"	1	13
+	^	1	14
+	.	1	14
+	+	1	14
+
+> /etc/ld.so.conf
+	"	1	0
+
 > ~/.vimrc
-	"	97	9
-	^	97	10
-	.	97	9
-	+	50	0
-	+	50	361
-	+	50	465
-	+	50	288
+	"	10	0
+	^	230	0
+	.	312	0
+	+	53	0
+	+	53	361
+	+	53	465
+	+	53	288
+	+	53	0
+	+	52	0
+	+	51	12
+	+	98	0
+	+	57	31
+	+	56	33
+	+	130	0
+	+	240	20
+	+	241	21
+	+	242	19
+	+	240	0
+	+	82	41
+	+	22	0
+	+	83	38
+	+	83	35
+	+	83	35
+	+	86	0
+	+	91	0
+	+	87	0
+	+	88	0
+	+	89	0
+	+	86	0
+	+	85	0
+	+	83	35
+	+	83	35
+	+	84	46
+	+	82	39
+	+	58	26
+	+	103	0
+	+	99	0
+	+	103	28
+	+	102	74
+	+	100	9
+	+	295	0
+	+	295	0
+	+	294	36
+	+	306	0
+	+	288	0
+	+	306	0
+	+	307	29
+	+	7	0
+	+	309	0
+	+	313	0
+	+	204	46
+	+	306	8
+	+	306	0
+	+	305	10
+	+	295	0
+	+	315	19
+	+	314	0
+	+	315	0
+	+	315	20
+	+	316	0
+	+	315	14
+	+	4	2
+	+	314	12
+	+	3	1
+	+	313	13
+	+	2	0
+	+	313	11
+	+	2	0
+	+	2	0
+	+	1	0
+	+	312	0
+	+	2	0
+	+	312	19
+	+	2	0
+	+	312	0
+	z	233	9
+
+> ~/github/miniBoy/ControlP
+	"	10	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	11	0
+	+	2	0
+
+> ~/github/miniBoy/screen.c
+	"	20	65
+	^	20	66
+	.	21	0
+	+	16	23
+	+	146	0
+	+	21	0
+	+	29	0
+	+	28	6
+	+	21	0
+	z	20	65
+
+> ~/github/miniBoy/NERD_tree_1
+	"	5	6
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/github/miniBoy/linenoise/linenoise.c
+	"	1	0
+
+> ~/github/miniBoy/timer.c
+	"	1	0
+
+> ~/github/miniBoy/lr35902.c
+	"	42	21
+	^	42	22
+	.	224	0
+	+	42	26
+	+	42	22
+	+	43	0
+	+	224	0
+	z	42	21
+
+> ~/github/miniBoy/keypad.h
+	"	1	0
+
+> ~/github/miniBoy/lr35902.h
+	"	1	0
+
+> ~/github/miniBoy/main.h
+	"	1	0
+
+> ~/github/miniBoy/memory.c
+	"	1	0
+
+> fugitive:///home/silver/github/miniBoy/.git//0/screen.c
+	"	18	27
+
+> ~/github/miniBoy/.git/index
+	"	1	0
+
+> fugitive:///home/silver/github/miniBoy/.git//7195f2b03468dd067b12ffaeb62f3f5ad15f9927
+	"	9	0
+
+> fugitive:///home/silver/github/miniBoy/.git//7195f2b03468dd067b12ffaeb62f3f5ad15f9927/debugger.c
+	"	45	0
+
+> fugitive:///home/silver/github/miniBoy/.git//f78674c384f3dd80bc5add94eef0e1dc6f34ede0/debugger.c
+	"	44	0
+
+> fugitive:///home/silver/github/miniBoy/.git//7195f2b03468dd067b12ffaeb62f3f5ad15f9927/screen.c
+	"	1	0
+
+> ~/github/miniBoy/main.c
+	"	1	0
+
+> ~/.i3/config
+	"	1	0
+	^	250	14
+	.	250	13
+	+	251	36
+	+	225	0
+	+	242	45
+	+	242	0
+	+	244	15
+	+	245	10
+	+	246	11
+	+	245	43
+	+	246	44
+	+	245	41
+	+	246	42
+	+	245	40
+	+	246	41
+	+	245	40
+	+	246	41
+	+	244	25
+	+	245	26
+	+	246	27
+	+	245	42
+	+	246	43
+	+	235	0
+	+	235	15
+	+	235	11
+	+	235	10
+	+	235	17
+	+	235	16
+	+	235	21
+	+	235	0
+	+	235	17
+	+	251	1
+	+	235	11
+	+	235	10
+	+	235	17
+	+	235	16
+	+	170	0
+	+	171	0
+	+	170	0
+	+	171	0
+	+	235	0
+	+	235	0
+	+	235	0
+	+	235	0
+	+	235	0
+	+	235	0
+	+	242	0
+	+	243	0
+	+	244	0
+	+	245	0
+	+	246	0
+	+	235	0
+	+	235	16
+	+	235	15
+	+	235	28
+	+	236	0
+	+	237	0
+	+	238	0
+	+	236	13
+	+	237	13
+	+	236	27
+	+	237	25
+	+	235	0
+	+	235	0
+	+	45	0
+	+	52	0
+	+	51	0
+	+	46	0
+	+	51	23
+	+	50	21
+	+	249	4
+	+	242	12
+	+	243	8
+	+	244	8
+	+	245	8
+	+	246	8
+	+	58	29
+	+	59	0
+	+	58	0
+	+	57	0
+	+	13	12
+	+	172	19
+	+	57	0
+	+	58	29
+	+	249	21
+	+	31	0
+	+	32	0
+	+	33	0
+	+	34	0
+	+	35	0
+	+	36	0
+	+	44	0
+	+	44	0
+	+	44	8
+	+	44	8
+	+	44	0
+	+	44	0
+	+	43	0
+	+	39	0
+	+	40	0
+	+	39	24
+	+	250	13
+
+> ~/.xbindkeysrc
+	"	1	0
+	^	4	12
+	.	4	4
+	+	25	0
+	+	10	14
+	+	15	4
+	+	20	4
+	+	25	8
+	+	20	8
+	+	15	8
+	+	10	8
+	+	4	11
+	+	9	4
+	+	15	0
+	+	14	4
+	+	19	4
+	+	25	0
+	+	24	4
+	+	4	4
+
+> /etc/netctl/mlan0-XSF-UPC
+	"	7	13
+	^	7	14
+	.	7	13
+	+	7	13
+
+> ~/github/dot_files/.screenrc
+	"	1	0
+
+> ~/github/dot_files/.Xmodmap
+	"	1	0
+
+> ~/.Xresources
+	"	99	15
+	^	104	16
+	.	104	0
+	+	64	22
+	+	64	0
+	+	105	0
+	+	64	34
+	+	65	0
+	+	65	23
+	+	105	0
+	+	65	36
+	+	66	0
+	+	105	0
+	+	65	0
+	+	41	16
+	+	41	14
+	+	105	0
+	+	105	0
+	+	105	0
+	+	105	0
+	+	105	0
+	+	41	0
 	+	50	0
 	+	49	0
-	+	48	12
-	+	95	0
-	+	54	31
-	+	53	33
-	+	127	0
-	+	237	20
-	+	238	21
-	+	239	19
-	+	237	0
-	+	79	41
+	+	64	0
+	+	51	79
+	+	62	0
+	+	57	1
+	+	61	1
+	+	64	0
+	+	65	0
+	+	57	0
+	+	65	0
+	+	66	0
+	+	105	0
+	+	104	0
+
+> ~/.bashrc
+	"	31	0
+	.	31	0
+	+	29	0
+	+	29	0
 	+	19	0
-	+	80	38
-	+	80	35
-	+	80	35
-	+	83	0
-	+	88	0
-	+	84	0
-	+	85	0
-	+	86	0
-	+	83	0
-	+	82	0
-	+	80	35
-	+	80	35
-	+	81	46
-	+	79	39
-	+	55	26
-	+	100	0
-	+	96	0
-	+	100	28
-	+	99	74
-	+	97	9
-	z	230	9
+	+	20	0
+	+	21	0
+	+	22	0
+	+	29	0
+	+	31	0
+	+	29	0
+	+	8	0
+	+	17	0
+	+	33	0
+	+	26	0
+	+	27	0
+	+	29	0
+	+	33	0
+	+	33	0
+	+	30	26
+	+	31	0
+
+> ~/ControlP
+	"	10	0
+	.	2	0
+	+	11	0
+	+	2	0
+
+> /usr/share/vim/vim74/doc/help.txt
+	"	12	31
+
+> ~/.config/xfce4/terminal/accels.scm
+	"	2	55
+	^	2	56
+	.	2	55
+	+	1	58
+	+	2	55
+
+> /etc/acpi/handler.sh
+	"	65	16
+	^	64	78
+	.	65	16
+	+	66	25
+	+	65	25
+	+	9	16
+	+	64	16
+	+	65	16
+	+	64	16
+	+	65	16
+	+	64	26
+	+	65	16
+	+	64	57
+	+	65	16
+
+> ~/github/dot_files/.bashrc
+	"	121	0
+
+> ~/tmp
+	"	1	20
+	^	1	21
+	.	1	20
+	+	1	184
+	+	1	208
+	+	1	20
+
+> /etc/systemd/logind.conf
+	"	1	0
+
+> /etc/X11/xorg.conf.d/10-synaptics.conf
+	"	8	29
+	^	8	30
+	.	8	29
+	+	7	29
+	+	8	29
+
+> /etc/X11/xorg.conf.d/50-touchpad.conf
+	"	2	0
+
+> /etc/X11/xorg.conf.d/50-touchpad-cmt-daisy.conf
+	"	12	0
+	^	7	25
+	.	12	0
+	+	6	4
+	+	8	0
+	+	6	4
+	+	8	29
+	+	7	0
+	+	6	4
+	+	7	29
+	+	12	0
+
+> ~/.conkyrc
+	"	37	41
+	^	38	56
+	.	38	55
+	+	38	21
+	+	38	55
+
+> ~/github/dot_files/.conkyrc
+	"	28	0
+
+> /etc/pulse/default.pa
+	"	47	45
+	^	47	46
+	.	47	45
+	+	171	0
+	+	172	0
+	+	171	44
+	+	172	36
+	+	171	0
+	+	172	0
+	+	47	45
+
+> ~/option-window
+	"	1	0
+	.	926	0
+	+	926	0
+
+> /etc/X11/xorg.conf.d/ControlP
+	"	5	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2	0
+
+> /etc/X11/xorg.conf.d/50-touchpad.conf.bak
+	"	4	0
+
+> ~/github/dot_files/[Vundle] Installer
+	"	17	0
+	.	1	0
+	+	1	0
 
 > /media/raid1-100-data1/Documents/tmp/matasano/go/[Vundle] Installer
 	"	17	0
@@ -1279,17 +2013,6 @@ $
 	+	25	0
 	+	46	14
 
-> /etc/pulse/default.pa
-	"	172	0
-	^	172	1
-	.	172	0
-	+	171	0
-	+	172	0
-	+	171	44
-	+	172	36
-	+	171	0
-	+	172	0
-
 > /etc/pulse/client.conf
 	"	1	0
 
@@ -1390,1592 +2113,3 @@ $
 	+	21	0
 	+	16	37
 	+	18	29
-
-> /media/raid1-100-data1/Documents/tmp/rust/own_test/src/lib.rs
-	"	2	27
-	^	2	28
-	.	2	27
-	+	1	11
-	+	2	27
-
-> /media/raid1-100-data1/Documents/tmp/rust/adder/src/lib.rs
-	"	1	12
-	^	1	13
-	.	1	12
-	+	8	18
-	+	6	12
-	+	8	0
-	+	8	0
-	+	1	31
-	+	2	8
-	+	6	0
-	+	7	29
-	+	1	12
-
-> /media/raid1-100-data1/Documents/tmp/rust/guessing_game/src/main.rs
-	"	40	0
-	^	16	51
-	.	16	50
-	+	1	12
-	+	41	11
-	+	41	0
-	+	6	29
-	+	11	40
-	+	12	39
-	+	13	32
-	+	14	58
-	+	23	26
-	+	34	1
-	+	23	11
-	+	7	51
-	+	8	55
-	+	2	8
-	+	7	40
-	+	3	22
-	+	23	23
-	+	24	37
-	+	26	49
-	+	27	50
-	+	28	47
-	+	26	48
-	+	27	49
-	+	28	47
-	+	36	36
-	+	37	33
-	+	38	36
-	+	39	25
-	+	36	18
-	+	15	46
-	+	23	40
-	+	24	22
-	+	16	31
-	+	17	25
-	+	18	17
-	+	19	47
-	+	20	18
-	+	22	5
-	+	24	14
-	+	23	32
-	+	26	48
-	+	27	49
-	+	26	0
-	+	15	45
-	+	10	10
-	+	9	0
-	+	24	4
-	+	33	4
-	+	32	7
-	+	28	3
-	+	27	7
-	+	26	11
-	+	25	3
-	+	23	7
-	+	22	3
-	+	21	7
-	+	20	11
-	+	19	15
-	+	18	3
-	+	17	7
-	+	16	3
-	+	15	7
-	+	14	3
-	+	13	7
-	+	12	3
-	+	11	7
-	+	21	13
-	+	29	37
-	+	31	13
-	+	20	23
-	+	8	5
-	+	15	9
-	+	16	50
-
-> /media/raid1-100-data1/Documents/tmp/rust/guessing_game/[Vundle] Installer
-	"	15	0
-	.	1	0
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/rust/hello_world/main.rs
-	"	2	3
-	^	2	4
-	.	2	3
-	+	1	11
-	+	2	3
-
-> /media/raid1-100-data1/Documents/tmp/rust/hello_world/Cargo.toml
-	"	9	19
-	^	5	41
-	.	5	40
-	+	1	0
-	+	5	40
-
-> /media/raid1-100-data1/Documents/tmp/rust/hello_world/ControlP
-	"	2	0
-	.	2	0
-	+	2	0
-
-> /media/raid1-100-data1/Documents/tmp/rust/hello_world/src/main.rs
-	"	18	0
-	^	10	37
-	.	10	36
-	+	12	23
-	+	13	14
-	+	14	8
-	+	15	12
-	+	16	12
-	+	7	31
-	+	6	13
-	+	7	37
-	+	6	12
-	+	6	0
-	+	1	15
-	+	4	1
-	+	4	0
-	+	2	0
-	+	9	33
-	+	10	25
-	+	7	1
-	+	11	1
-	+	10	36
-
-> ~/tmp/test2.c
-	"	7	6
-	^	7	7
-	.	5	14
-	+	3	12
-	+	6	28
-	+	7	19
-	+	5	14
-
-> /media/raid1-100-data1/Documents/tmp/rust/main.rs
-	"	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/ruby/set3/chal20/chal20.rb
-	"	80	8
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/c19.go
-	"	91	48
-	^	76	11
-	.	1	0
-	+	136	0
-	+	136	31
-	+	136	32
-	+	136	40
-	+	136	28
-	+	136	0
-	+	136	54
-	+	136	0
-	+	136	67
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	2
-	+	136	0
-	+	136	2
-	+	136	0
-	+	136	1
-	+	136	0
-	+	136	2
-	+	136	36
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	35
-	+	136	0
-	+	136	35
-	+	136	6
-	+	136	53
-	+	136	6
-	+	136	0
-	+	136	36
-	+	136	0
-	+	136	40
-	+	136	0
-	+	136	44
-	+	136	0
-	+	136	26
-	+	136	0
-	+	136	0
-	+	136	26
-	+	136	0
-	+	136	26
-	+	136	0
-	+	136	27
-	+	136	0
-	+	136	0
-	+	136	42
-	+	136	0
-	+	136	42
-	+	136	0
-	+	136	0
-	+	136	41
-	+	136	0
-	+	136	0
-	+	136	45
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	42
-	+	136	0
-	+	136	42
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	62
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	46
-	+	136	0
-	+	136	46
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	97	0
-	+	98	27
-	+	1	0
-	+	99	27
-	+	1	0
-	+	100	27
-	+	1	0
-	+	101	27
-	+	1	0
-	+	102	41
-	+	1	0
-	+	103	41
-	+	1	0
-	+	1	0
-	+	77	0
-	+	78	0
-	+	1	0
-
-> ~/tmp/test.c
-	"	30	0
-	^	24	37
-	.	24	0
-	+	11	12
-	+	11	12
-	+	29	9
-	+	19	25
-	+	12	20
-	+	18	0
-	+	15	32
-	+	16	14
-	+	13	0
-	+	12	12
-	+	29	38
-	+	29	29
-	+	29	33
-	+	29	47
-	+	4	19
-	+	12	0
-	+	6	20
-	+	7	0
-	+	7	0
-	+	29	0
-	+	28	14
-	+	27	25
-	+	26	16
-	+	2	18
-	+	8	31
-	+	27	24
-	+	4	2
-	+	26	5
-	+	15	6
-	+	13	6
-	+	8	40
-	+	13	7
-	+	14	0
-	+	23	0
-	+	21	3
-	+	8	46
-	+	22	7
-	+	25	0
-	+	24	0
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/dmg.c
-	"	155	2
-	^	108	14
-	.	108	13
-	+	102	1
-	+	102	0
-	+	102	14
-	+	102	18
-	+	102	0
-	+	102	23
-	+	102	14
-	+	102	0
-	+	102	19
-	+	102	13
-	+	102	18
-	+	102	15
-	+	102	20
-	+	102	25
-	+	102	25
-	+	102	29
-	+	102	13
-	+	102	18
-	+	102	23
-	+	102	14
-	+	102	18
-	+	102	23
-	+	102	21
-	+	102	26
-	+	102	31
-	+	102	22
-	+	102	21
-	+	102	20
-	+	102	20
-	+	102	0
-	+	102	7
-	+	102	44
-	+	102	10
-	+	102	0
-	+	102	25
-	+	102	21
-	+	102	0
-	+	102	0
-	+	102	22
-	+	102	0
-	+	102	7
-	+	102	13
-	+	102	21
-	+	102	0
-	+	102	0
-	+	102	0
-	+	102	0
-	+	102	0
-	+	102	21
-	+	102	0
-	+	102	0
-	+	102	0
-	+	102	0
-	+	102	21
-	+	102	0
-	+	102	0
-	+	102	0
-	+	102	0
-	+	102	0
-	+	101	0
-	+	18	0
-	+	101	0
-	+	100	0
-	+	99	19
-	+	103	12
-	+	14	0
-	+	11	14
-	+	109	11
-	+	110	11
-	+	73	0
-	+	72	3
-	+	17	1
-	+	96	0
-	+	96	0
-	+	95	1
-	+	94	0
-	+	117	2
-	+	123	2
-	+	105	0
-	+	19	0
-	+	64	0
-	+	132	7
-	+	159	0
-	+	160	28
-	+	151	30
-	+	151	3
-	+	158	0
-	+	149	0
-	+	148	0
-	+	151	0
-	+	154	0
-	+	151	0
-	+	153	3
-	+	158	0
-	+	133	8
-	+	148	0
-	+	132	31
-	+	152	24
-	+	8	19
-	+	108	13
-	e	109	1
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/timer.c
-	"	87	13
-	^	66	1
-	.	70	0
-	+	93	35
-	+	93	30
-	+	7	5
-	+	70	8
-	+	93	0
-	+	72	0
-	+	76	0
-	+	82	0
-	+	71	0
-	+	82	0
-	+	73	23
-	+	73	0
-	+	75	18
-	+	75	0
-	+	10	31
-	+	7	21
-	+	72	28
-	+	73	23
-	+	44	0
-	+	12	18
-	+	44	35
-	+	62	0
-	+	12	4
-	+	12	47
-	+	43	0
-	+	13	0
-	+	12	9
-	+	44	37
-	+	45	0
-	+	13	0
-	+	45	15
-	+	46	0
-	+	45	7
-	+	57	7
-	+	47	16
-	+	50	16
-	+	10	30
-	+	50	15
-	+	53	20
-	+	56	21
-	+	59	7
-	+	61	9
-	+	13	0
-	+	15	12
-	+	18	12
-	+	21	16
-	+	24	17
-	+	74	13
-	+	75	0
-	+	10	35
-	+	79	8
-	+	25	1
-	+	26	0
-	+	27	0
-	+	28	1
-	+	29	0
-	+	30	0
-	+	31	0
-	+	32	0
-	+	33	0
-	+	34	0
-	+	35	0
-	+	36	0
-	+	37	0
-	+	38	0
-	+	25	21
-	+	85	14
-	+	86	12
-	+	90	24
-	+	10	62
-	+	77	19
-	+	10	54
-	+	91	4
-	+	92	0
-	+	70	0
-	+	23	12
-	+	24	5
-	+	25	13
-	+	56	12
-	+	58	1
-	+	40	1
-	+	9	40
-	+	10	33
-	+	55	12
-	+	12	17
-	+	7	0
-	+	79	8
-	+	81	0
-	+	70	0
-	+	70	17
-	+	79	2
-	+	80	0
-	+	9	0
-	+	64	19
-	+	64	19
-	+	65	0
-	+	65	0
-	+	65	1
-	+	66	1
-	+	70	0
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/screen.h
-	"	44	36
-	^	42	3
-	.	42	2
-	+	43	46
-	+	44	36
-	+	42	2
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/dmg.h
-	"	7	31
-	^	7	50
-	.	7	49
-	+	7	49
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/io_regs.h
-	"	59	24
-	^	80	5
-	.	80	4
-	+	66	9
-	+	76	6
-	+	80	4
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/main.h
-	"	27	0
-	^	13	20
-	.	27	0
-	+	27	14
-	+	27	9
-	+	27	9
-	+	27	10
-	+	9	0
-	+	20	0
-	+	14	13
-	+	15	15
-	+	16	15
-	+	17	13
-	+	16	20
-	+	15	20
-	+	17	21
-	+	14	20
-	+	15	22
-	+	16	22
-	+	17	23
-	+	18	24
-	+	19	28
-	+	12	17
-	+	13	17
-	+	12	19
-	+	13	19
-	+	12	20
-	+	13	20
-	+	27	0
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/sdl.h
-	"	1	0
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.h
-	"	1	21
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/keypad.c
-	"	33	32
-	^	57	19
-	.	57	18
-	+	19	39
-	+	20	48
-	+	21	38
-	+	63	0
-	+	62	0
-	+	62	23
-	+	43	40
-	+	62	27
-	+	11	6
-	+	1	18
-	+	15	17
-	+	17	17
-	+	19	17
-	+	21	17
-	+	5	18
-	+	26	7
-	+	37	7
-	+	62	30
-	+	30	9
-	+	2	18
-	+	62	42
-	+	14	31
-	+	15	21
-	+	16	31
-	+	17	21
-	+	18	31
-	+	19	21
-	+	20	31
-	+	21	21
-	+	23	0
-	+	14	25
-	+	16	25
-	+	18	25
-	+	20	25
-	+	21	15
-	+	19	15
-	+	17	15
-	+	15	15
-	+	36	33
-	+	3	17
-	+	36	0
-	+	23	37
-	+	14	30
-	+	15	20
-	+	16	30
-	+	17	20
-	+	18	30
-	+	19	20
-	+	20	30
-	+	21	20
-	+	14	25
-	+	16	25
-	+	18	25
-	+	20	25
-	+	21	15
-	+	19	15
-	+	17	15
-	+	15	15
-	+	23	0
-	+	61	0
-	+	44	24
-	+	45	0
-	+	52	24
-	+	59	0
-	+	45	62
-	+	48	53
-	+	45	7
-	+	48	53
-	+	46	0
-	+	47	0
-	+	48	53
-	+	48	53
-	+	48	53
-	+	46	2
-	+	47	2
-	+	48	34
-	+	46	5
-	+	47	5
-	+	48	37
-	+	51	1
-	+	48	62
-	+	49	36
-	+	6	19
-	+	49	57
-	+	46	31
-	+	47	29
-	+	48	31
-	+	46	54
-	+	47	50
-	+	48	54
-	+	53	28
-	+	54	28
-	+	55	33
-	+	56	32
-	+	53	48
-	+	54	48
-	+	55	58
-	+	56	56
-	+	49	18
-	+	57	18
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/keypad.h
-	"	15	36
-	^	13	7
-	.	13	0
-	+	12	36
-	+	16	0
-	+	2	0
-	+	1	0
-	+	16	0
-	+	12	0
-	+	16	0
-	+	13	34
-	+	14	45
-	+	13	0
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/tmp
-	"	3	0
-	^	1	0
-	.	4	0
-	+	2	0
-	+	4	0
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/Makefile
-	"	32	14
-	^	20	38
-	.	20	37
-	+	54	0
-	+	53	17
-	+	19	39
-	+	20	37
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/rom.c
-	"	250	8
-	^	262	12
-	.	262	11
-	+	245	10
-	+	246	0
-	+	247	10
-	+	248	0
-	+	250	0
-	+	246	2
-	+	248	0
-	+	248	16
-	+	276	1
-	+	276	27
-	+	276	15
-	+	276	14
-	+	276	0
-	+	275	1
-	+	268	3
-	+	270	1
-	+	270	1
-	+	271	1
-	+	268	2
-	+	269	0
-	+	270	0
-	+	271	0
-	+	273	0
-	+	270	0
-	+	271	18
-	+	273	29
-	+	271	29
-	+	270	6
-	+	262	11
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/timer.h
-	"	4	17
-	^	4	18
-	.	4	17
-	+	2	0
-	+	3	0
-	+	2	35
-	+	3	17
-	+	3	45
-	+	4	17
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/c12.go
-	"	1	0
-	^	31	2
-	.	1	0
-	+	3	8
-	+	4	7
-	+	6	4
-	+	8	14
-	+	10	28
-	+	11	43
-	+	12	18
-	+	1	0
-	+	12	0
-	+	1	0
-	+	9	5
-	+	10	0
-	+	9	21
-	+	1	0
-	+	1	0
-	+	1	0
-	+	7	0
-	+	1	0
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/c13.go
-	"	74	1
-	^	120	0
-	.	1	0
-	+	74	3
-	+	83	56
-	+	84	14
-	+	83	58
-	+	73	48
-	+	11	3
-	+	73	23
-	+	6	0
-	+	7	0
-	+	87	33
-	+	98	13
-	+	88	0
-	+	93	53
-	+	98	0
-	+	94	11
-	+	95	0
-	+	94	6
-	+	98	21
-	+	88	17
-	+	110	2
-	+	111	2
-	+	112	41
-	+	125	9
-	+	134	0
-	+	125	1
-	+	108	2
-	+	109	2
-	+	125	34
-	+	126	33
-	+	133	34
-	+	96	0
-	+	88	0
-	+	92	34
-	+	82	33
-	+	133	0
-	+	78	0
-	+	84	0
-	+	83	53
-	+	93	53
-	+	100	0
-	+	101	55
-	+	102	0
-	+	102	0
-	+	103	0
-	+	126	0
-	+	125	0
-	+	103	9
-	+	102	26
-	+	104	14
-	+	43	1
-	+	60	47
-	+	61	53
-	+	117	9
-	+	114	8
-	+	116	8
-	+	117	7
-	+	115	5
-	+	116	5
-	+	117	5
-	+	115	36
-	+	118	2
-	+	113	59
-	+	123	65
-	+	124	28
-	+	123	60
-	+	121	14
-	+	123	32
-	+	121	19
-	+	123	42
-	+	124	2
-	+	126	36
-	+	128	0
-	+	133	28
-	+	128	37
-	+	129	34
-	+	130	37
-	+	129	26
-	+	130	21
-	+	129	46
-	+	130	46
-	+	131	0
-	+	130	21
-	+	131	46
-	+	133	53
-	+	128	27
-	+	132	0
-	+	119	15
-	+	65	0
-	+	74	0
-	+	60	0
-	+	59	0
-	+	16	16
-	+	119	14
-	+	123	9
-	+	126	38
-	+	127	0
-	+	122	50
-	+	123	59
-	+	120	0
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/c14.go
-	"	11	0
-	^	77	36
-	.	1	0
-	+	1	0
-	+	73	38
-	+	1	0
-	+	1	0
-	+	1	0
-	+	79	43
-	+	95	26
-	+	84	21
-	+	88	39
-	+	1	0
-	+	91	60
-	+	1	0
-	+	1	0
-	+	43	55
-	+	1	0
-	+	91	66
-	+	85	48
-	+	1	0
-	+	69	35
-	+	72	16
-	+	69	19
-	+	72	36
-	+	74	30
-	+	1	0
-	+	75	0
-	+	73	0
-	+	75	0
-	+	1	0
-	+	69	15
-	+	72	15
-	+	1	0
-	+	71	39
-	+	1	0
-	+	27	48
-	+	29	0
-	+	76	44
-	+	68	9
-	+	69	0
-	+	70	0
-	+	1	0
-	+	123	2
-	+	120	62
-	+	120	66
-	+	121	54
-	+	1	0
-	+	1	0
-	+	34	26
-	+	1	0
-	+	1	0
-	+	120	2
-	+	121	2
-	+	1	0
-	+	81	11
-	+	1	0
-	+	86	29
-	+	1	0
-	+	87	7
-	+	1	0
-	+	87	11
-	+	1	0
-	+	44	0
-	+	43	0
-	+	44	61
-	+	1	0
-	+	52	35
-	+	55	35
-	+	1	0
-	+	43	0
-	+	56	54
-	+	57	35
-	+	1	0
-	+	56	51
-	+	1	0
-	+	85	51
-	+	1	0
-	+	1	0
-	+	1	0
-	+	92	34
-	+	1	0
-	+	86	18
-	+	1	0
-	+	91	46
-	+	1	0
-	+	93	13
-	+	88	13
-	+	1	0
-	+	1	0
-	+	92	54
-	+	1	0
-	+	86	47
-	+	1	0
-	+	95	15
-	+	1	0
-	+	1	0
-	+	1	0
-	+	77	35
-	+	1	0
-	+	86	30
-	+	92	36
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/set2/set2.go
-	"	210	0
-	^	214	2
-	.	1	0
-	+	137	0
-	+	136	0
-	+	137	24
-	+	128	28
-	+	129	30
-	+	130	32
-	+	131	16
-	+	132	11
-	+	134	30
-	+	89	14
-	+	129	34
-	+	1	0
-	+	19	19
-	+	1	0
-	+	150	34
-	+	151	21
-	+	152	30
-	+	153	32
-	+	1	0
-	+	134	54
-	+	1	0
-	+	134	69
-	+	1	0
-	+	134	56
-	+	1	0
-	+	45	0
-	+	23	19
-	+	24	1
-	+	24	1
-	+	1	0
-	+	12	5
-	+	1	0
-	+	161	1
-	+	1	0
-	+	161	29
-	+	1	0
-	+	1	0
-	+	173	0
-	+	208	0
-	+	185	49
-	+	186	56
-	+	187	27
-	+	188	25
-	+	189	0
-	+	204	53
-	+	206	0
-	+	204	14
-	+	1	0
-	+	209	24
-	+	173	24
-	+	209	52
-	+	210	0
-	+	20	14
-	+	21	12
-	+	1	0
-	+	174	5
-	+	179	4
-	+	210	28
-	+	1	0
-	+	222	0
-	+	211	0
-	+	216	28
-	+	217	30
-	+	222	0
-	+	209	51
-	+	222	25
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	175	1
-	+	1	0
-	+	1	0
-	+	180	1
-	+	1	0
-	+	184	19
-	+	1	0
-	+	1	0
-	+	184	21
-	+	216	0
-	+	216	0
-	+	1	0
-	+	180	1
-	+	1	0
-	+	184	0
-	+	216	0
-	+	220	0
-	+	1	0
-	+	221	25
-	+	218	23
-	+	221	39
-	+	1	0
-	+	6	8
-	+	1	0
-	+	1	0
-	+	1	0
-	+	221	50
-	+	1	0
-	+	219	24
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/set1/set1.go
-	"	9	0
-	.	1	0
-	+	5	4
-	+	1	0
-	+	65	73
-	+	1	0
-	+	65	0
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/pkcs7/pkcs7.go
-	"	19	1
-	^	35	17
-	.	1	0
-	+	34	12
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/c15.go
-	"	27	0
-	^	23	18
-	.	1	0
-	+	3	8
-	+	4	5
-	+	5	2
-	+	1	0
-	+	8	13
-	+	10	39
-	+	11	39
-	+	12	39
-	+	14	3
-	+	10	4
-	+	11	4
-	+	12	4
-	+	27	41
-	+	27	16
-	+	27	28
-	+	27	21
-	+	27	9
-	+	27	27
-	+	9	26
-	+	10	9
-	+	11	9
-	+	12	9
-	+	16	12
-	+	10	8
-	+	11	8
-	+	12	8
-	+	16	35
-	+	25	0
-	+	27	0
-	+	17	0
-	+	10	13
-	+	11	13
-	+	1	0
-	+	17	39
-	+	19	19
-	+	16	5
-	+	19	25
-	+	22	25
-	+	1	0
-	+	1	0
-	+	14	8
-	+	1	0
-	+	22	41
-	+	1	0
-	+	22	36
-	+	23	17
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/c16.go
-	"	25	39
-	^	23	2
-	.	1	0
-	+	3	7
-	+	6	3
-	+	1	0
-	+	6	13
-	+	6	8
-	+	10	13
-	+	10	0
-	+	9	0
-	+	12	0
-	+	10	0
-	+	9	0
-	+	1	0
-	+	16	15
-	+	25	47
-	+	26	28
-	+	1	0
-	+	1	0
-	+	6	7
-	+	1	0
-	+	6	0
-	+	4	0
-	+	1	0
-	+	1	16
-	+	1	0
-	+	1	0
-	+	12	2
-	+	1	0
-	+	26	42
-	+	27	24
-	+	28	9
-	+	29	20
-	+	1	0
-	+	1	0
-	+	12	1
-	+	13	58
-	+	14	0
-	+	5	7
-	+	14	17
-	+	11	8
-	+	14	36
-	+	15	36
-	+	16	23
-	+	19	0
-	+	25	0
-	+	15	5
-	+	25	41
-	+	1	0
-	+	18	15
-	+	17	31
-	+	18	33
-	+	17	4
-	+	18	59
-	+	25	39
-	+	17	3
-	+	18	17
-	+	1	0
-	+	25	28
-	+	1	0
-	+	17	23
-	+	1	0
-	+	19	23
-	+	1	0
-	+	19	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	13	2
-	+	1	0
-	+	19	23
-	+	1	0
-	+	25	34
-	+	1	0
-	+	4	1
-	+	13	1
-	+	16	1
-	+	18	1
-	+	1	0
-	+	1	0
-	+	1	0
-	+	22	56
-	+	1	0
-	+	22	92
-	+	1	0
-	+	19	0
-	+	25	0
-	+	1	0
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/c10.go
-	"	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/modes/cbc.go
-	"	6	0
-	^	11	9
-	.	1	0
-	+	99	0
-	+	99	29
-	+	99	4
-	+	99	0
-	+	99	31
-	+	99	0
-	+	99	30
-	+	99	29
-	+	99	0
-	+	99	36
-	+	99	0
-	+	99	0
-	+	58	35
-	+	1	0
-	+	26	19
-	+	1	0
-	+	8	27
-	+	9	26
-	+	10	11
-	+	1	0
-	+	51	0
-	+	59	0
-	+	86	0
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/c17.go
-	"	37	11
-	^	51	3
-	.	1	0
-	+	144	0
-	+	144	18
-	+	144	13
-	+	144	0
-	+	144	0
-	+	144	0
-	+	144	0
-	+	144	3
-	+	144	4
-	+	144	38
-	+	144	0
-	+	107	0
-	+	1	0
-	+	92	0
-	+	103	22
-	+	92	0
-	+	1	0
-	+	96	15
-	+	97	0
-	+	101	0
-	+	99	8
-	+	1	0
-	+	1	0
-	+	94	15
-	+	96	17
-	+	98	47
-	+	1	0
-	+	1	0
-	+	93	14
-	+	1	0
-	+	103	32
-	+	1	0
-	+	87	18
-	+	94	5
-	+	95	0
-	+	94	5
-	+	96	8
-	+	98	26
-	+	1	0
-	+	1	0
-	+	103	21
-	+	1	0
-	+	1	0
-	+	103	0
-	+	115	0
-	+	1	0
-	+	122	69
-	+	123	8
-	+	122	53
-	+	123	37
-	+	125	9
-	+	84	0
-	+	125	46
-	+	128	0
-	+	125	11
-	+	124	50
-	+	128	58
-	+	126	11
-	+	127	9
-	+	128	61
-	+	129	40
-	+	132	13
-	+	129	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	139	2
-	+	140	28
-	+	141	47
-	+	142	29
-	+	1	0
-	+	142	38
-	+	1	0
-	+	119	27
-	+	1	0
-	+	119	8
-	+	119	28
-	+	119	11
-	+	119	14
-	+	119	11
-	+	1	0
-	+	1	0
-	+	119	0
-	+	131	4
-	+	132	0
-	+	131	30
-	+	1	0
-	+	135	13
-	+	136	32
-	+	1	0
-	+	6	5
-	+	1	0
-	+	8	16
-	+	1	0
-	+	50	41
-	+	1	0
-	+	50	6
-	+	1	0
-	+	50	3
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/c18.go
-	"	4	0
-	^	26	36
-	.	1	0
-	+	3	7
-	+	4	10
-	+	5	13
-	+	6	4
-	+	1	0
-	+	10	13
-	+	11	90
-	+	12	11
-	+	6	0
-	+	7	0
-	+	12	12
-	+	27	0
-	+	12	59
-	+	19	1
-	+	19	0
-	+	18	0
-	+	14	34
-	+	15	10
-	+	13	0
-	+	24	38
-	+	15	23
-	+	1	0
-	+	1	0
-	+	1	0
-	+	15	18
-	+	1	0
-	+	24	6
-	+	25	32
-	+	12	6
-	+	17	34
-	+	1	0
-	+	26	35
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/modes/ecb.go
-	"	7	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/modes/ctr.go
-	"	47	13
-	^	47	14
-	.	1	0
-	+	1	0
-	+	8	0
-	+	9	0
-	+	1	0
-	+	9	7
-	+	14	12
-	+	18	8
-	+	19	0
-	+	18	39
-	+	15	14
-	+	1	0
-	+	29	20
-	+	29	48
-	+	29	12
-	+	19	0
-	+	49	0
-	+	29	63
-	+	29	0
-	+	49	0
-	+	1	0
-	+	29	11
-	+	49	0
-	+	48	0
-	+	49	0
-	+	29	0
-	+	29	25
-	+	1	0
-	+	30	0
-	+	37	17
-	+	12	14
-	+	22	37
-	+	37	36
-	+	36	32
-	+	13	0
-	+	12	1
-	+	13	17
-	+	12	10
-	+	22	44
-	+	23	41
-	+	36	44
-	+	37	23
-	+	33	28
-	+	34	0
-	+	37	34
-	+	46	0
-	+	36	54
-	+	46	9
-	+	35	19
-	+	46	0
-	+	36	0
-	+	37	0
-	+	46	1
-	+	46	0
-	+	38	25
-	+	37	24
-	+	38	36
-	+	46	4
-	+	38	20
-	+	46	25
-	+	46	23
-	+	1	0
-	+	1	0
-	+	34	0
-	+	33	0
-	+	1	0
-	+	39	29
-	+	40	7
-	+	41	10
-	+	42	0
-	+	46	0
-	+	42	0
-	+	35	5
-	+	1	0
-	+	18	39
-	+	1	0
-	+	29	23
-	+	1	0
-	+	29	34
-	+	29	0
-	+	18	5
-	+	1	0
-	+	7	18
-	+	1	0
-	+	37	31
-	+	36	50
-	+	33	51
-	+	1	0
-	+	1	0
-	+	33	29
-	+	1	0
-	+	36	30
-	+	1	0
-	+	5	4
-	+	35	53
-	+	1	0
-	+	43	11
-	+	1	0
-	+	7	0
-	+	1	0
-	+	1	0
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/c6.go
-	"	42	0
-	^	14	41
-	.	1	0
-	+	1	0
-
-> ~/.mpv/config
-	"	2	0
-	.	3	0
-	+	3	0
-
-> ~/.mpv/input.config
-	"	2	12
-	^	2	13
-	.	1	0
-	+	1	0
-
-> /media/raid1-100-data1/Documents/Universitat/MIRI/Q1/SMDE/assig3/queue_simulator/simulator.py
-	"	132	0
-
-> /media/raid1-100-data1/Documents/Universitat/MIRI/Q1/SMDE/assig3/queue_simulator/.git/MERGE_MSG
-	"	1	0
-
-> /media/raid1-100-data1/Documents/ieee_passwords.txt
-	"	23	0
-	^	23	0
-	.	1	0
-	+	23	0
-	+	1	0
-
-> /etc/udev/rules.d/50-wiimote.rules
-	"	1	28
-	^	1	29
-	.	1	29
-	+	1	29
-
-> /media/raid1-100-data1/Documents/tmp/matasano/python/set2/10.txt
-	"	1	0
-
-> /tmp/vaqgXH2/132
-	"	72	0
