@@ -297,3 +297,4 @@ set sidescrolloff=5           " keep at least 5 lines left/right
 set showmode
 " nore , ;
 " nore . :
+set ttymouse=sgr
