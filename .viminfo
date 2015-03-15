@@ -8,10 +8,10 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/bob
+~MSle0~/gitgutt
 
 # Last Substitute Search Pattern:
-~MSle0&        
+~MSle0&", msg
 
 # Last Substitute String:
 $
@@ -19,47 +19,46 @@ $
 # Command Line History (newest to oldest):
 :q
 :w
-:set ttymouse=sgr
-:vsplit
-:2305
-<::::::;;;;;<<<<<====>>>>>???@@AAABBBCCCDDDEEFFFGGGHHHIIIJJKKKLLLLLLMMMMMMMNNNNNNNOOOOOOOOOOOOOOPPPPPPPPPPPPPPQQQQQQQQQRRRRRRRRSSSSSSSSTTTTTTTTTUUUUUUUUVVVVVVVVWWWWWWWWWXXXXXXXXXXYYYYYYYYYYZZZZZZZZZZZZZ[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ZZZZZZZZZZZZZZZZYYYYYYYYYYYYYXXXXXXXXXXXWWWWWWWWWWWWVVVVVVVVVUUUUUUUUUTTTTTTTTTSSSSSSSSRRRRRRRRRQQQQQQQQQPPPPPPPPOOOOOOOOONNNNNNNNMMMMMMMLLLLLLLLKKKKKKKJJJJJJJIIIIIIIHHHHHHHGGGGGGFFFFFFFEEEEEEEDDDDDDDDDCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBAAAAAAAAAA@@@@@@@?????????>>>>>>>>========<<<<<<<<<;;;;;;;;::::::::99999998888888877777776666666555555544444443333333222222221111111100000000/////////..........---------,,,,,,,,,,,,,,,,,++++++++++++**************))))))))))))))))))))))))))))))))))))))))********++++++,,,,,-----....///0001122233344455566777888999:::;;<<<===>>>???@@@@@AAAAABBBBBBCCCCCCDDDDDDEEEEFFFFFFGGGGGGHHHHHIIIIIIJJJJJJKKKKKKLLLLLMMMMMNNNNNOOOOOPPPPQQQQQRRRRRSSSSSTTTTTUUUUUVVVVVVWWWWWWXXXXXXYYYYYYYYZZZZZZZZZZZZ[[[[[[[[[[[[[[[[[[[[[[ZZZZZZZZZZZZYYYYYYYYYXXXXXXXWWWWWWWVVVVVVVUUUUUTTTTTTSSSSSRRRRRQQQQQPPPPOOOOOONNNNNMMMMMLLLLLKKKKKKJJJJJIIIIIHHHHHGGGGGFFFFEEEEEDDDDDCCCCBBBAAA@@???>>>===<<<;;:::9998887776655544444333333322222221111111111222222233333444455566677888999::;;<<==>>??@@AABBCCDDEEFFGGHHHIIIJJJKKKLLMMMNNNOOOPPPPQQQQQRRRRRRSSSSSSTTTTTTUUUUUUVVVVVWWWWWXXXXXYYYYYYZZZZZZZ[[[[[[[[[[[[[[[[ZZZZZZZZYYYYYXXXWWVVUUTTSSRRQQPOONMMLKKJIIHHGFFEDDCBBA@@??>>==<<;;:::99988888877777777666699999:::::::::;;;;;;;<<<<<====>>>>???@@@AAABBBCCDDDEEEFFFGGGHHIIIJJJKKKLLLLLLMMMMMMMNNNNNNNNNOOOOOOOOOOPPPPPPPPPQQQQQQQQRRRRRRRSSSSSSSSTTTTTTTUUUUUUUUUVVVVVVVVVVVVVVVVVVVVVVVVVVVUUUUUUUUTTTTTSSSSRRRQQQPPPOOONNMMMLLLKKJJIIHHGGFFEEDDCCBBAA@@???>>>===<<<<<;;;;;;;::::::::::::::::::;;;;;<<<<===>>???@@@AABBCCDDEEFFGGHHIIJJKKLLMMNNOOOPPPQQQQRRRRRRRRQQQQQQPPPOONNMMLLKKJJIIHHGGFFEEDCCBAA@@>>==<<<;;;;;:::::::::;;;;;;<<<===>>??@@AABCCDEEFGGHIIJJKLLMNNOOPPQQRRRRSSSRRRRRRQQQPPPONNMMLKKJIIHGGFEDCCBA@@??>>==<<<<<;;;;<<<<<<===>>>??@AABCCDEEFGHIIJKLLMNOPPQRRSTTUUVVVVWWWWWWWWWVVVVVUUUTTSSRRQPPONNMLLKJIHHGFEEDCCBBAAA@@@@@@@@@@@AAAABBBCCDDEEFFGGHIIJKKLMMNNOPPQRRSSSTTTUUTTTTTTTTSSSSRRQQQPPOONNMMLLKKJJIIHHGGGFFFFFEFFFFFFFFGGGGHHHIIIJJJKKLLMMNNOOPPQQRRSSSTTTTTUTTTTTTTTTSSSSSRRQQQPPPOOONNNMMLLLKKKKJJJJJJJ
+:wq
+:highlight clear SignColumn
+:highlight GitGutterAdd ctermfg=green guifg=darkgreen
+:highlight GitGutterAdd ctermfg=green
+:highlight clear GitGutterChangeDefault
+:highlight clear GitGutterChange
+:highlight clear GitGutterAdd
+:highlight GitGutterAdd ctermbg=black
+:highlight SignColumn ctermbg=black
 :e c34.go
-:e c8.go
-:e set2/set2.go
-:e c32_server.go
-:e c31.go
+:e c35.go
+:vsplit
 :q!
-::
-:e memory.c
-:e main.c
-:AirlineToggleWhitespace
-:help airline
-:call DeleteTrailingWS()
-:R
-:AirlineTheme badwolf
-:AirlineTheme powerlineish
+:%s/", msg/", string(msg)/g
+:%s/", msg2/", string(msg2)/g
+:e c10.go
+:buffers
+:e c28.go
 
 # Search String History (newest to oldest):
-???BBBGG@@<<7711009911
-???
-?//...............666<<EEEEEE
-?/bob
-?/Sleep
-?/time
-?/N
-?/Prinln
-?/pod
-?/192.168
-?/93d9
-?/Path
-?/use std::path
-? \<current_dir\>
-? \<git_status\>
-? \<unwrap_or\>
-?/fn new
-? \<Path\>
-?/454
+?/gitgutt
+?/Colo
+?/color
+?/Colors
+?/mustang
+?/must
+?/theme
 ? \s\+$
+?/-1
+?/complet
+? ", msg
+? ", msg2
+?/Compare
+?/msg2 :=
+?/log
+? \<plaintext\>
+?/key
+?/crand
+?/This is not
+?/This is not an image
 
 # Expression History (newest to oldest):
 
@@ -69,201 +68,342 @@ $
 
 # Registers:
 "0	LINE	0
-		N := int64(math.Ceil(float64(p.BitLen()) / 8.0))
-"1	LINE	0
-	eduardsanou@gmail.com 
+	        rel(*this, q[j] != q[i] + 1);
+""1	LINE	0
+	" gitgutter better color contrast
+	highlight clear SignColumn
+	highlight GitGutterAdd ctermfg=green guifg=darkgreen
+	highlight GitGutterChange ctermfg=yellow guifg=darkyellow
+	highlight GitGutterDelete ctermfg=red guifg=darkred
+	highlight GitGutterChangeDelete ctermfg=yellow guifg=darkyellow
+	
 "2	LINE	0
-	C
+	set background=dark
+	"let g:solarized_termcolors=256
+	"g:solarized_contrast high
+	colorscheme custom_Mustang
 "3	LINE	0
-	IIpackage main
-	
-	import (
-		crand "crypto/rand"
-		"encoding/hex"
-		"fmt"
-		"math"
-		"math/big"
-	)
-	
-	func alice(con chan []byte, fin chan int) {
-	417
-<	_p, _ := hex.DecodeString("ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca237327ffffffffffffffff")
-		_g, _ := hex.DecodeString("02")
-	
-		var p big.Int
-		var g big.Int
-		p.SetBytes(_p)
-		g.SetBytes(_g)
-	
-		N := int64(math.Ceil(float64(p.BitLen()) / 8.0))
-	
-		var a big.Int
-		var A big.Int
-		_a := make([]byte, N)
-		_, err := crand.Read(_a)
-		if err != nil {
-			panic(err)
-		}
-		a.SetBytes(_a)
-		A.Exp(&g, &a, &p)
-	
-		con <- p.Bytes()
-		con <- g.Bytes()
-		con <- A.Bytes()
-	
-		var B big.Int
-		B.SetBytes(<-con)
-	
-		var s big.Int
-		s.Exp(&B, &a, &p)
-	
-		fmt.Println("Alice", s.String())
-	
-		fin <- 0
-	}
-	
-	func bob(con chan []byte, fin chan int) {
-		var p big.Int
-		var g big.Int
-		var A big.Int
+	" Setup colorscheme first of all, so that gitgutter knows about the colors
 "4	LINE	0
-		"time"
+	"let g:solarized_termcolors=256
+	"g:solarized_contrast high
+	colorscheme custom_Mustang
 "5	LINE	0
-		time.Sleep(5000000000)
+	"let g:solarized_termcolors=256
+	"g:solarized_contrast high
+	colorscheme custom_Mustang
 "6	LINE	0
 	
 "7	LINE	0
 	
+	set background=dark
+	"let g:solarized_termcolors=256
+	"g:solarized_contrast high
+	colorscheme custom_Mustang
 "8	LINE	0
-		_g := <-con
+	    /*
+	    for (i = 0; i < n - 1; i++) {
+	      BoolVarArgs diag_asc_a, diag_asc_b, diag_desc_a, diag_desc_b;
+	      for (j = 0; j < n - i; j++) {
+	        diag_asc_a << q[(j+i)*n + j];
+	        diag_asc_b << q[j*n + j + i];
+	        diag_desc_a << q[(j+i)*n + n - 1 - j];
+	        diag_desc_b << q[j*n + n - 1 - (j + i)];
+	      }
+	      rel(*this, sum(diag_asc_a) <= 1);
+	      rel(*this, sum(diag_desc_a) <= 1);
+	      if (i != 0) {
+	        rel(*this, sum(diag_asc_b) <= 1);
+	        rel(*this, sum(diag_desc_b) <= 1);
+	      }
+	    }
+	    */
 "9	LINE	0
-		var A big.Int
+	    */
 "q	CHAR	0
 	;
-""-	CHAR	0
-	]
+"-	CHAR	0
+	"
 
 # File marks:
-'0  1  9  /media/raid1-100-data1/Documents/tmp/matasano/.git/COMMIT_EDITMSG
-'1  16  0  /mnt/nya/lvl/lvl0
-'2  43  18  /mnt/nya/lvl/lvl1
-'3  97  22  /mnt/nya/lvl/lvl0
-'4  26  43  /var/mount_crypt.sh
-'5  55  25  /mnt/nya/lvl/lvl1
-'6  17  8  /media/raid1-100-data1/Documents/tmp/matasano/go/c34.go
-'7  948  43  /media/raid1-100-data1/Documents/tmp/matasano/go/Cory_Doctorow_-_Homeland.txt
-'8  13  1  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
-'9  90  1  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
+'0  1  0  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+'1  13  26  ~/.vim/colors/custom_Mustang.vim
+'2  304  21  ~/.vimrc
+'3  49  0  ~/.vimrc
+'4  103  0  ~/.vimrc
+'5  34  11  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+'6  107  58  /mnt/nya/lvl/lvl0
+'7  2  27  /media/raid1-100-data1/Documents/scripts/mount_sshfs_openbsd.sh
+'8  109  22  ~/.bashrc
+'9  5  15  /mnt/nya/lvl/lvl3
 
 # Jumplist (newest first):
--'  1  9  /media/raid1-100-data1/Documents/tmp/matasano/.git/COMMIT_EDITMSG
--'  16  0  /mnt/nya/lvl/lvl0
+-'  1  0  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+-'  13  26  ~/.vim/colors/custom_Mustang.vim
+-'  1  0  ~/.vim/colors/custom_Mustang.vim
+-'  304  21  ~/.vimrc
+-'  103  0  ~/.vimrc
+-'  54  21  ~/.vimrc
+-'  154  0  ~/.vimrc
+-'  72  0  ~/.vimrc
+-'  40  17  ~/.vimrc
+-'  30  35  ~/.vimrc
+-'  24  1  ~/.vimrc
+-'  21  1  ~/.vimrc
+-'  18  1  ~/.vimrc
+-'  202  10  ~/.vimrc
+-'  201  4  ~/.vimrc
+-'  153  5  ~/.vimrc
+-'  109  20  ~/.vimrc
+-'  107  13  ~/.vimrc
+-'  158  5  ~/.vimrc
+-'  159  0  ~/.vimrc
+-'  22  8  ~/.vimrc
+-'  57  22  ~/.vimrc
+-'  161  19  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  49  0  ~/.vimrc
+-'  80  14  ~/.vimrc
+-'  102  0  ~/.vimrc
+-'  97  0  ~/.vimrc
+-'  93  0  ~/.vimrc
+-'  88  0  ~/.vimrc
+-'  76  0  ~/.vimrc
+-'  56  0  ~/.vimrc
+-'  13  0  ~/.vimrc
+-'  10  0  ~/.vimrc
+-'  4  0  ~/.vimrc
+-'  2  0  ~/.vimrc
+-'  34  11  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+-'  35  0  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+-'  29  34  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+-'  31  40  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+-'  24  19  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+-'  21  38  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+-'  25  29  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+-'  27  4  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+-'  48  37  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+-'  19  4  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+-'  26  25  /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+-'  107  58  /mnt/nya/lvl/lvl0
 -'  1  1  /mnt/nya/lvl/lvl0
--'  43  18  /mnt/nya/lvl/lvl1
--'  1  8  /mnt/nya/lvl/lvl1
--'  97  22  /mnt/nya/lvl/lvl0
--'  26  43  /var/mount_crypt.sh
--'  1  0  /var/mount_crypt.sh
--'  55  25  /mnt/nya/lvl/lvl1
--'  17  8  /media/raid1-100-data1/Documents/tmp/matasano/go/c34.go
--'  25  25  /media/raid1-100-data1/Documents/tmp/matasano/go/c34.go
--'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c34.go
--'  948  43  /media/raid1-100-data1/Documents/tmp/matasano/go/Cory_Doctorow_-_Homeland.txt
--'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/Cory_Doctorow_-_Homeland.txt
--'  13  1  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  90  1  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  89  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  61  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  51  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  47  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  42  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  39  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  36  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  34  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  30  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  26  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  22  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  11  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  5  1  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  65  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  2  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  49  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  63  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  74  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  85  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  87  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  91  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  95  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  100  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  102  30  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  98  15  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  79  4  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  59  10  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  105  13  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  7  1  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  62  48  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  8  5  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  55  14  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  99  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  54  21  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  41  10  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  38  14  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  28  27  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  25  12  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  18  20  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  17  18  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  12  39  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  45  39  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  43  2  /media/raid1-100-data1/Documents/tmp/matasano/go/c32_server.go
--'  22  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c31.go
--'  63  2  /media/raid1-100-data1/Documents/tmp/matasano/go/c32.go
--'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c32.go
--'  4  0  /etc/hosts
--'  1  0  /etc/hosts
--'  2  58  /media/raid1-100-data1/Documents/scripts/mount_sshfs_openbsd.sh
+-'  2  27  /media/raid1-100-data1/Documents/scripts/mount_sshfs_openbsd.sh
 -'  1  0  /media/raid1-100-data1/Documents/scripts/mount_sshfs_openbsd.sh
--'  1  0  ~/.ssh/known_hosts
--'  457  99  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  6  43  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  458  57  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  50  0  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  456  67  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  7  0  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  4  14  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  112  36  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  223  49  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  79  39  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  510  38  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  472  24  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  427  42  /media/raid1-100-data1/Documents/github/exa/src/file.rs
--'  13  1  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  1  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  90  1  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  89  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  61  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  51  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  47  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  42  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  39  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  36  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  34  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  30  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  26  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  22  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  11  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  5  1  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  65  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
--'  2  0  /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
+-'  109  22  ~/.bashrc
+-'  128  0  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  5  15  /mnt/nya/lvl/lvl3
+-'  1  1  /mnt/nya/lvl/lvl3
+-'  76  0  /mnt/nya/lvl/lvl0
+-'  304  21  ~/.vimrc
+-'  103  0  ~/.vimrc
+-'  54  21  ~/.vimrc
+-'  154  0  ~/.vimrc
+-'  72  0  ~/.vimrc
+-'  40  17  ~/.vimrc
+-'  30  35  ~/.vimrc
+-'  24  1  ~/.vimrc
+-'  21  1  ~/.vimrc
+-'  18  1  ~/.vimrc
+-'  202  10  ~/.vimrc
+-'  201  4  ~/.vimrc
+-'  153  5  ~/.vimrc
+-'  109  20  ~/.vimrc
+-'  107  13  ~/.vimrc
+-'  158  5  ~/.vimrc
+-'  159  0  ~/.vimrc
+-'  22  8  ~/.vimrc
+-'  57  22  ~/.vimrc
+-'  161  19  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  49  0  ~/.vimrc
+-'  80  14  ~/.vimrc
+-'  102  0  ~/.vimrc
+-'  97  0  ~/.vimrc
+-'  93  0  ~/.vimrc
+-'  88  0  ~/.vimrc
+-'  76  0  ~/.vimrc
+-'  56  0  ~/.vimrc
+-'  13  0  ~/.vimrc
+-'  10  0  ~/.vimrc
+-'  4  0  ~/.vimrc
+-'  2  0  ~/.vimrc
+-'  304  21  ~/.vimrc
+-'  103  0  ~/.vimrc
+-'  54  21  ~/.vimrc
+-'  154  0  ~/.vimrc
+-'  72  0  ~/.vimrc
+-'  40  17  ~/.vimrc
+-'  30  35  ~/.vimrc
+-'  24  1  ~/.vimrc
 
 # History of marks within files (newest to oldest):
 
-> /media/raid1-100-data1/Documents/tmp/matasano/.git/COMMIT_EDITMSG
-	"	1	9
+> /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/p.cpp
+	"	1	0
+	^	34	12
+	.	34	11
+	+	34	26
+	+	34	26
+	+	34	31
+	+	34	32
+	+	34	32
+	+	34	39
+	+	34	17
+	+	34	17
+	+	34	30
+	+	34	19
+	+	34	0
+	+	34	32
+	+	34	65
+	+	34	0
+	+	34	31
+	+	34	0
+	+	34	16
+	+	34	16
+	+	34	34
+	+	34	39
+	+	34	41
+	+	34	38
+	+	34	0
+	+	34	18
+	+	34	0
+	+	34	34
+	+	34	7
+	+	34	8
+	+	34	6
+	+	34	36
+	+	34	39
+	+	34	38
+	+	34	0
+	+	34	0
+	+	34	38
+	+	27	26
+	+	27	26
+	+	23	0
+	+	22	13
+	+	23	19
+	+	26	25
+	+	34	29
+	+	19	4
+	+	21	36
+	+	48	37
+	+	23	0
+	+	26	0
+	+	34	0
+	+	24	18
+	+	25	0
+	+	27	0
+	+	24	15
+	+	27	0
+	+	25	29
+	+	34	5
+	+	34	5
+	+	23	5
+	+	34	5
+	+	21	38
+	+	23	0
+	+	34	0
+	+	23	24
+	+	21	39
+	+	24	19
+	+	28	29
+	+	29	35
+	+	30	36
+	+	31	32
+	+	30	41
+	+	31	40
+	+	34	0
+	+	35	0
+	+	34	11
+	z	34	11
+
+> ~/.vim/colors/custom_Mustang.vim
+	"	13	26
+	^	13	27
+	.	13	26
+	+	13	26
+
+> ~/.vimrc
+	"	304	21
+	^	304	22
+	.	304	21
+	+	50	0
+	+	50	361
+	+	50	465
+	+	50	288
+	+	50	0
+	+	49	0
+	+	48	12
+	+	96	0
+	+	54	31
+	+	53	33
+	+	129	0
+	+	238	20
+	+	239	21
+	+	240	19
+	+	238	0
+	+	80	41
+	+	19	0
+	+	81	38
+	+	81	35
+	+	81	35
+	+	84	0
+	+	89	0
+	+	85	0
+	+	86	0
+	+	87	0
+	+	84	0
+	+	83	0
+	+	81	35
+	+	81	35
+	+	82	46
+	+	80	39
+	+	55	26
+	+	101	0
+	+	97	0
+	+	101	28
+	+	100	74
+	+	98	9
+	+	313	0
+	+	301	15
+	+	103	33
+	+	103	62
+	+	161	0
+	+	72	0
+	+	71	0
+	+	72	0
+	+	72	0
+	+	72	74
+	+	72	0
+	+	72	0
+	+	72	17
+	+	72	0
+	+	72	0
+	+	72	0
+	+	72	0
+	+	154	0
+	+	103	0
+	+	306	0
+	+	305	0
+	+	303	18
+	+	305	19
+	+	304	21
+	z	231	9
+
+> /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/.git/COMMIT_EDITMSG
+	"	1	0
+
+> /media/raid1-100-data1/Documents/Universitat/MIRI/Q2/CPS/queens_problem/run.sh
+	"	5	10
+	^	5	11
+	.	5	10
+	+	5	10
 
 > /mnt/nya/lvl/lvl0
-	"	16	0
-	.	16	0
+	"	107	58
+	^	107	59
+	.	107	27
 	+	8	32
 	+	8	0
 	+	32	19
@@ -274,183 +414,142 @@ $
 	+	42	16
 	+	43	49
 	+	32	0
-	+	73	30
-	+	78	18
-	+	73	0
+	+	77	30
+	+	82	18
+	+	77	0
 	+	20	26
 	+	40	4
 	+	41	4
 	+	44	50
 	+	44	0
-	+	97	22
+	+	101	22
 	+	16	3
 	+	17	0
 	+	16	0
+	+	75	13
+	+	107	27
 
-> /mnt/nya/lvl/lvl1
-	"	43	18
-	^	43	19
-	.	43	18
-	+	12	23
-	+	46	5
-	+	46	0
-	+	25	0
-	+	49	14
-	+	52	29
-	+	55	25
-	+	43	18
+> /media/raid1-100-data1/Documents/scripts/mount_sshfs_openbsd.sh
+	"	2	27
+	^	2	12
+	.	2	27
+	+	2	27
 
-> /var/mount_crypt.sh
-	"	26	43
-	^	26	44
-	.	26	43
-	+	23	43
-	+	24	43
-	+	25	43
-	+	26	43
+> ~/.bashrc
+	"	109	22
+
+> /mnt/nya/lvl/lvl3
+	"	5	15
+	^	5	16
+	.	5	15
+	+	5	15
 
 > /media/raid1-100-data1/Documents/tmp/matasano/go/c34.go
-	"	17	8
-	.	25	0
-	+	88	7
-	+	88	4
-	+	88	29
-	+	88	0
-	+	88	27
-	+	88	0
-	+	88	13
-	+	88	25
-	+	88	14
-	+	88	11
-	+	1	0
-	+	88	0
-	+	88	9
-	+	88	13
-	+	1	0
-	+	88	25
-	+	88	19
-	+	88	23
-	+	1	0
-	+	88	0
-	+	88	0
-	+	1	0
-	+	88	0
-	+	88	0
-	+	88	1
-	+	88	0
-	+	88	12
-	+	88	0
-	+	88	0
-	+	88	0
-	+	88	0
-	+	88	11
-	+	88	9
-	+	88	0
-	+	88	18
-	+	88	18
-	+	88	17
-	+	88	0
-	+	88	0
-	+	88	1
-	+	88	17
-	+	88	17
-	+	88	16
-	+	88	16
-	+	88	16
-	+	1	0
-	+	88	0
-	+	88	6
-	+	88	2
-	+	88	1
-	+	1	0
-	+	88	31
-	+	88	29
-	+	1	0
-	+	88	0
-	+	88	0
-	+	88	0
-	+	88	0
-	+	88	5
-	+	1	0
-	+	1	0
-	+	88	12
-	+	1	0
-	+	88	0
-	+	88	12
-	+	1	0
-	+	88	5
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	88	20
-	+	88	17
-	+	1	0
-	+	88	25
-	+	1	0
-	+	88	8
-	+	1	0
-	+	1	0
-	+	88	39
-	+	1	1
-	+	1	0
-	+	1	0
-	+	25	25
-	+	25	41
-	+	28	0
-	+	25	0
-
-> ~/.vimrc
-	"	300	15
-	^	300	16
-	.	300	15
-	+	50	0
-	+	50	361
-	+	50	465
-	+	50	288
-	+	50	0
-	+	49	0
-	+	48	12
-	+	95	0
-	+	54	31
-	+	53	33
-	+	127	0
-	+	237	20
-	+	238	21
-	+	239	19
+	"	105	17
+	.	181	0
+	+	237	6
 	+	237	0
-	+	79	41
-	+	19	0
-	+	80	38
-	+	80	35
-	+	80	35
-	+	83	0
-	+	88	0
-	+	84	0
-	+	85	0
-	+	86	0
-	+	83	0
-	+	82	0
-	+	80	35
-	+	80	35
-	+	81	46
-	+	79	39
-	+	55	26
-	+	100	0
-	+	96	0
-	+	100	28
-	+	99	74
-	+	97	9
-	+	301	0
-	+	300	15
-	z	230	9
-
-> /media/raid1-100-data1/Documents/tmp/matasano/go/Cory_Doctorow_-_Homeland.txt
-	"	948	43
+	+	237	0
+	+	237	10
+	+	237	0
+	+	237	18
+	+	237	16
+	+	237	16
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	8
+	+	237	23
+	+	237	11
+	+	237	14
+	+	237	2
+	+	237	8
+	+	237	0
+	+	237	12
+	+	237	0
+	+	237	0
+	+	237	2
+	+	237	1
+	+	237	0
+	+	237	2
+	+	237	0
+	+	237	3
+	+	237	0
+	+	237	1
+	+	237	0
+	+	237	0
+	+	237	34
+	+	237	0
+	+	237	2
+	+	237	0
+	+	237	15
+	+	237	15
+	+	237	13
+	+	237	13
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	1
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	31
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	11
+	+	237	0
+	+	237	58
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	14
+	+	237	12
+	+	237	0
+	+	237	0
+	+	237	9
+	+	237	9
+	+	237	46
+	+	237	37
+	+	237	0
+	+	237	40
+	+	237	59
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	24
+	+	237	37
+	+	237	46
+	+	237	30
+	+	237	9
+	+	237	9
+	+	237	47
+	+	237	0
+	+	237	61
+	+	237	0
+	+	237	68
+	+	237	0
+	+	237	0
+	+	237	0
+	+	237	17
+	+	237	16
+	+	237	21
+	+	181	0
 
 > /media/raid1-100-data1/Documents/tmp/matasano/go/c33.go
-	"	13	1
+	"	30	0
 	^	104	31
 	.	1	0
 	+	54	1
@@ -553,6 +652,254 @@ $
 	+	1	0
 	+	102	32
 	+	1	0
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/c10.go
+	"	4	0
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/c28.go
+	"	37	1
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/c35.go
+	"	275	0
+	^	224	3
+	.	1	0
+	+	1	0
+	+	31	18
+	+	32	17
+	+	1	0
+	+	1	0
+	+	108	0
+	+	1	0
+	+	117	0
+	+	137	0
+	+	136	0
+	+	137	28
+	+	107	0
+	+	1	0
+	+	212	16
+	+	227	13
+	+	230	0
+	+	230	0
+	+	215	0
+	+	240	0
+	+	1	0
+	+	231	0
+	+	237	0
+	+	240	0
+	+	238	0
+	+	231	17
+	+	235	23
+	+	232	12
+	+	233	12
+	+	232	2
+	+	233	2
+	+	236	5
+	+	237	10
+	+	236	11
+	+	1	0
+	+	242	2
+	+	240	1
+	+	242	10
+	+	239	23
+	+	240	0
+	+	1	0
+	+	246	0
+	+	245	1
+	+	1	0
+	+	1	0
+	+	1	0
+	+	137	0
+	+	1	0
+	+	281	47
+	+	1	0
+	+	281	42
+	+	1	0
+	+	1	0
+	+	229	15
+	+	229	10
+	+	229	0
+	+	230	0
+	+	229	24
+	+	229	7
+	+	229	0
+	+	229	10
+	+	229	19
+	+	229	12
+	+	229	15
+	+	1	0
+	+	229	2
+	+	229	2
+	+	229	0
+	+	217	0
+	+	226	0
+	+	1	0
+	+	223	24
+	+	1	0
+	+	203	0
+	+	192	1
+	+	192	3
+	+	1	0
+	+	193	13
+	+	196	13
+	+	198	0
+	+	200	0
+	+	198	14
+	+	196	14
+	+	200	14
+	+	198	13
+	+	202	0
+	+	193	5
+	+	1	0
+	+	219	19
+	+	221	18
+	+	223	17
+	+	221	32
+	+	223	48
+	+	1	0
+	+	221	49
+	+	1	0
+	+	221	26
+	+	1	0
+	+	223	48
+	+	1	0
+	+	1	0
+
+> /media/raid1-100-data1/Documents/github/4chan-image-dl/4chan_gui.py
+	"	36	2
+	^	659	9
+	.	656	0
+	+	484	44
+	+	486	0
+	+	486	91
+	+	489	0
+	+	486	2
+	+	487	17
+	+	488	29
+	+	521	7
+	+	522	5
+	+	524	22
+	+	501	7
+	+	502	68
+	+	504	22
+	+	511	7
+	+	512	51
+	+	514	20
+	+	492	21
+	+	514	17
+	+	651	11
+	+	652	27
+	+	653	49
+	+	584	0
+	+	582	5
+	+	584	36
+	+	586	0
+	+	514	34
+	+	51	12
+	+	586	0
+	+	585	22
+	+	582	0
+	+	578	6
+	+	578	0
+	+	579	12
+	+	51	17
+	+	51	0
+	+	16	27
+	+	51	37
+	+	51	8
+	+	51	21
+	+	51	0
+	+	51	25
+	+	51	1
+	+	51	0
+	+	16	19
+	+	51	30
+	+	51	20
+	+	51	26
+	+	51	0
+	+	16	0
+	+	51	20
+	+	16	21
+	+	18	0
+	+	51	0
+	+	51	0
+	+	51	1
+	+	51	29
+	+	51	0
+	+	51	7
+	+	565	0
+	+	537	0
+	+	538	16
+	+	543	22
+	+	544	13
+	+	545	0
+	+	544	57
+	+	538	0
+	+	665	18
+	+	666	19
+	+	51	0
+	+	656	0
+	+	538	16
+	+	538	0
+	+	51	17
+	+	51	10
+	+	51	33
+	+	51	2
+	+	51	2
+	+	51	2
+	+	51	2
+	+	51	0
+	+	18	0
+	+	24	0
+	+	37	2
+	+	36	36
+	+	21	2
+	+	22	26
+	+	36	36
+	+	18	0
+	+	17	21
+	+	23	8
+	+	29	26
+	+	36	63
+	+	656	15
+	+	505	0
+	+	514	32
+	+	544	37
+	+	659	32
+	+	660	34
+	+	659	8
+	+	656	0
+	z	656	4
+
+> /media/raid1-100-data1/Documents/tmp/deviations_downloader/da_dw.py
+	"	34	23
+
+> /media/raid1-100-data1/Documents/tmp/matasano/.git/COMMIT_EDITMSG
+	"	1	9
+
+> /mnt/nya/lvl/lvl1
+	"	43	18
+	^	43	19
+	.	43	18
+	+	12	23
+	+	46	5
+	+	46	0
+	+	25	0
+	+	49	14
+	+	52	29
+	+	55	25
+	+	43	18
+
+> /var/mount_crypt.sh
+	"	26	43
+	^	26	44
+	.	26	43
+	+	23	43
+	+	24	43
+	+	25	43
+	+	26	43
+
+> /media/raid1-100-data1/Documents/tmp/matasano/go/Cory_Doctorow_-_Homeland.txt
+	"	948	43
 
 > /media/raid1-100-data1/Documents/tmp/matasano/go/set2/set2.go
 	"	8	8
@@ -817,12 +1164,6 @@ $
 	+	3	27
 	+	4	0
 
-> /media/raid1-100-data1/Documents/scripts/mount_sshfs_openbsd.sh
-	"	2	58
-	^	2	59
-	.	2	58
-	+	2	58
-
 > ~/.ssh/known_hosts
 	"	1	0
 
@@ -848,112 +1189,6 @@ $
 	+	458	40
 	+	456	36
 	+	457	99
-
-> /media/raid1-100-data1/Documents/github/4chan-image-dl/4chan_gui.py
-	"	665	19
-	^	659	9
-	.	656	0
-	+	484	44
-	+	486	0
-	+	486	91
-	+	489	0
-	+	486	2
-	+	487	17
-	+	488	29
-	+	521	7
-	+	522	5
-	+	524	22
-	+	501	7
-	+	502	68
-	+	504	22
-	+	511	7
-	+	512	51
-	+	514	20
-	+	492	21
-	+	514	17
-	+	651	11
-	+	652	27
-	+	653	49
-	+	584	0
-	+	582	5
-	+	584	36
-	+	586	0
-	+	514	34
-	+	51	12
-	+	586	0
-	+	585	22
-	+	582	0
-	+	578	6
-	+	578	0
-	+	579	12
-	+	51	17
-	+	51	0
-	+	16	27
-	+	51	37
-	+	51	8
-	+	51	21
-	+	51	0
-	+	51	25
-	+	51	1
-	+	51	0
-	+	16	19
-	+	51	30
-	+	51	20
-	+	51	26
-	+	51	0
-	+	16	0
-	+	51	20
-	+	16	21
-	+	18	0
-	+	51	0
-	+	51	0
-	+	51	1
-	+	51	29
-	+	51	0
-	+	51	7
-	+	565	0
-	+	537	0
-	+	538	16
-	+	543	22
-	+	544	13
-	+	545	0
-	+	544	57
-	+	538	0
-	+	665	18
-	+	666	19
-	+	51	0
-	+	656	0
-	+	538	16
-	+	538	0
-	+	51	17
-	+	51	10
-	+	51	33
-	+	51	2
-	+	51	2
-	+	51	2
-	+	51	2
-	+	51	0
-	+	18	0
-	+	24	0
-	+	37	2
-	+	36	36
-	+	21	2
-	+	22	26
-	+	36	36
-	+	18	0
-	+	17	21
-	+	23	8
-	+	29	26
-	+	36	63
-	+	656	15
-	+	505	0
-	+	514	32
-	+	544	37
-	+	659	32
-	+	660	34
-	+	659	8
-	+	656	0
-	z	656	4
 
 > /media/raid1-100-data1/Documents/tmp/rust/data_structures/src/main.rs
 	"	17	50
@@ -2032,9 +2267,6 @@ $
 	+	1	0
 	+	1	0
 
-> /media/raid1-100-data1/Documents/tmp/matasano/go/c28.go
-	"	13	0
-
 > /media/raid1-100-data1/Documents/tmp/matasano/go/c27.go
 	"	48	1
 
@@ -2634,221 +2866,3 @@ $
 	+	66	9
 	+	76	6
 	+	80	4
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/main.h
-	"	27	0
-	^	13	20
-	.	27	0
-	+	27	14
-	+	27	9
-	+	27	9
-	+	27	10
-	+	9	0
-	+	20	0
-	+	14	13
-	+	15	15
-	+	16	15
-	+	17	13
-	+	16	20
-	+	15	20
-	+	17	21
-	+	14	20
-	+	15	22
-	+	16	22
-	+	17	23
-	+	18	24
-	+	19	28
-	+	12	17
-	+	13	17
-	+	12	19
-	+	13	19
-	+	12	20
-	+	13	20
-	+	27	0
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/sdl.h
-	"	1	0
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/lr35902.h
-	"	1	21
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/keypad.c
-	"	33	32
-	^	57	19
-	.	57	18
-	+	19	39
-	+	20	48
-	+	21	38
-	+	63	0
-	+	62	0
-	+	62	23
-	+	43	40
-	+	62	27
-	+	11	6
-	+	1	18
-	+	15	17
-	+	17	17
-	+	19	17
-	+	21	17
-	+	5	18
-	+	26	7
-	+	37	7
-	+	62	30
-	+	30	9
-	+	2	18
-	+	62	42
-	+	14	31
-	+	15	21
-	+	16	31
-	+	17	21
-	+	18	31
-	+	19	21
-	+	20	31
-	+	21	21
-	+	23	0
-	+	14	25
-	+	16	25
-	+	18	25
-	+	20	25
-	+	21	15
-	+	19	15
-	+	17	15
-	+	15	15
-	+	36	33
-	+	3	17
-	+	36	0
-	+	23	37
-	+	14	30
-	+	15	20
-	+	16	30
-	+	17	20
-	+	18	30
-	+	19	20
-	+	20	30
-	+	21	20
-	+	14	25
-	+	16	25
-	+	18	25
-	+	20	25
-	+	21	15
-	+	19	15
-	+	17	15
-	+	15	15
-	+	23	0
-	+	61	0
-	+	44	24
-	+	45	0
-	+	52	24
-	+	59	0
-	+	45	62
-	+	48	53
-	+	45	7
-	+	48	53
-	+	46	0
-	+	47	0
-	+	48	53
-	+	48	53
-	+	48	53
-	+	46	2
-	+	47	2
-	+	48	34
-	+	46	5
-	+	47	5
-	+	48	37
-	+	51	1
-	+	48	62
-	+	49	36
-	+	6	19
-	+	49	57
-	+	46	31
-	+	47	29
-	+	48	31
-	+	46	54
-	+	47	50
-	+	48	54
-	+	53	28
-	+	54	28
-	+	55	33
-	+	56	32
-	+	53	48
-	+	54	48
-	+	55	58
-	+	56	56
-	+	49	18
-	+	57	18
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/keypad.h
-	"	15	36
-	^	13	7
-	.	13	0
-	+	12	36
-	+	16	0
-	+	2	0
-	+	1	0
-	+	16	0
-	+	12	0
-	+	16	0
-	+	13	34
-	+	14	45
-	+	13	0
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/tmp
-	"	3	0
-	^	1	0
-	.	4	0
-	+	2	0
-	+	4	0
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/Makefile
-	"	32	14
-	^	20	38
-	.	20	37
-	+	54	0
-	+	53	17
-	+	19	39
-	+	20	37
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/rom.c
-	"	250	8
-	^	262	12
-	.	262	11
-	+	245	10
-	+	246	0
-	+	247	10
-	+	248	0
-	+	250	0
-	+	246	2
-	+	248	0
-	+	248	16
-	+	276	1
-	+	276	27
-	+	276	15
-	+	276	14
-	+	276	0
-	+	275	1
-	+	268	3
-	+	270	1
-	+	270	1
-	+	271	1
-	+	268	2
-	+	269	0
-	+	270	0
-	+	271	0
-	+	273	0
-	+	270	0
-	+	271	18
-	+	273	29
-	+	271	29
-	+	270	6
-	+	262	11
-
-> /media/raid1-100-data1/Documents/tmp/gameboy/timer.h
-	"	4	17
-	^	4	18
-	.	4	17
-	+	2	0
-	+	3	0
-	+	2	35
-	+	3	17
-	+	3	45
-	+	4	17
