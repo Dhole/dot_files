@@ -119,3 +119,8 @@ alias sudo="sudo -E"
 #alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
 #PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[0m\] '
+
+if [ "$TERM" = "xterm" ]
+then
+  export TERM="xterm-256color"
+fi
