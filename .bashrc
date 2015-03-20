@@ -124,3 +124,9 @@ if [ "$TERM" = "xterm" ]
 then
   export TERM="xterm-256color"
 fi
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+export HOME_BIN=$HOME/bin
+export PATH=$PATH:$HOME_BIN
