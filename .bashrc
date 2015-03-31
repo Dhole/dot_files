@@ -88,6 +88,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias sudo="sudo -E"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -113,9 +114,35 @@ if ! shopt -oq posix; then
   fi
 fi
 
+genpasswd() {
+  local l=$1
+  [ "$l" == "" ] && l=16
+  tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
+}
+
 export VISUAL="/usr/bin/vim -p -X"
 complete -cf sudo
 alias sudo="sudo -E"
 #alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
 #PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[0m\] '
+
+if [ "$TERM" = "xterm" ]
+then
+  export TERM="xterm-256color"
+fi
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+export HOME_BIN=$HOME/bin
+export PATH=$PATH:$HOME_BIN
+
+# Make less (and man with PAGER=less) colorized. Handy for less highlight in tmux
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;016m\E[48;5;220m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline

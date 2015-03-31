@@ -69,6 +69,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+
 """""""""""""""""""""""
 " Plugins configuration
 """""""""""""""""""""""
@@ -98,6 +99,7 @@ let delimitMate_expand_space = 1
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
+
 """"""""""""""""""""""""""""""
 " End of Plugins configuration
 """"""""""""""""""""""""""""""
@@ -149,14 +151,13 @@ set mat=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax enable
-
 set background=dark
 "let g:solarized_termcolors=256
 "g:solarized_contrast high
 colorscheme custom_Mustang
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting
+syntax enable
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -308,4 +309,16 @@ endif
 :set guioptions-=r  "remove right-hand scroll bar
 :set guioptions-=L  "remove left-hand scroll bar
 :set guioptions-=M
+
+set ttymouse=sgr
+
+"""""""""""""""""""
+" Plugins config after
+"""""""""""""""""""
+" gitgutter better color contrast
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=green guifg=darkgreen
+highlight GitGutterChange ctermfg=yellow guifg=darkyellow
+highlight GitGutterDelete ctermfg=red guifg=darkred
+highlight GitGutterChangeDelete ctermfg=yellow guifg=darkyellow
 
