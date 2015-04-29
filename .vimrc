@@ -78,7 +78,8 @@ filetype plugin indent on    " required
 " airline
 """"""""""""""""""""""""""""""
 let g:airline_theme             = 'kolor'
-let g:airline_enable_branch     = 1
+"let g:airline_enable_branch     = 1
+let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
 "let g:airline#extensions#tabline#enabled = 1
 "let g:airline_enable_syntastic  = 1
