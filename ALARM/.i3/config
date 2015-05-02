@@ -159,6 +159,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 assign [class="Pidgin"] $ws3
 assign [class="Thunderbird"] $ws3
 assign [class="Ktorrent"] $ws4
+assign [class="Claws-mail"] $ws3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -227,7 +228,8 @@ bindsym XF86AudioPlay exec mocp --toggle-pause
 bindsym XF86AudioStop exec mocp --stop
 bindsym XF86AudioPrev exec mocp --previous
 bindsym XF86AudioNext exec mocp --next
-bindsym Ctrl+$mod+l exec xscreensaver-command -lock
+#bindsym Ctrl+$mod+l exec xscreensaver-command -lock
+bindsym Ctrl+$mod+l exec i3lock -nc 000000
 
 bindsym Print exec scrot -e 'mv $f ~/shots/'
 bindsym $mod+Print exec scrot -s -e 'mv $f ~/shots/'
@@ -238,6 +240,7 @@ bindsym $mod+u border none
 
 #exec kwalletmanager
 #exec thunderbird
+exec claws-mail
 
 bindsym $mod+F6 exec chbr down
 bindsym $mod+F7 exec chbr up
@@ -245,7 +248,8 @@ bindsym $mod+F8 exec amixer -c 0 set Headphone toggle
 bindsym $mod+F9 exec amixer -c 0 set Headphone 1%- unmute
 bindsym $mod+F10 exec amixer -c 0 set Headphone 1%+ unmute
 
-exec xscreensaver -no-splash        # starts screensaver daemon 
+#exec xscreensaver -no-splash        # starts screensaver daemon 
+exec xautolock -detectsleep -time 10 -locker "i3lock -nc 000000" -killtime 10 -killer "systemctl suspend"
 exec syndaemon -i 0.5 -d -t -K
 exec xbindkeys
 #exec xsetroot -cursor_name left_ptr # sets the cursor icon
