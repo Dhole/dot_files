@@ -2,84 +2,132 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd beep extendedglob nomatch notify
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/white/.zshrc'
+zstyle :compinstall filename '/home/black/.zshrc'
 
-autoload -Uz compinit promptinit
+autoload -Uz compinit
 compinit
-promptinit
 # End of lines added by compinstall
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# correction
+setopt correctall
 
-export VISUAL="/usr/bin/vim -p -X"
-#complete -cf sudo
-alias sudo="sudo -E"
-alias ls='ls --color=auto'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias nano="nano -w"
-#alias pacman="pacman-color"
-
-# Search in history starting with what's typed
-bindkey '^[[A' history-beginning-search-backward
-bindkey '^[[B' history-beginning-search-forward
-
+# prompt
+autoload -U promptinit
+promptinit
 prompt adam1
-zstyle ':completion:*' menu select
-setopt completealiases
-[ -r /usr/share/doc/pkgfile/command-not-found.zsh ] && . /usr/share/doc/pkgfile/command-not-found.zsh 
 
-# create a zkbd compatible hash;
-# to add other keys to this hash, see: man 5 terminfo
-typeset -A key
+setopt HIST_IGNORE_DUPS
 
-key[Home]=${terminfo[khome]}
+ttyctl -f
 
-key[End]=${terminfo[kend]}
-key[Insert]=${terminfo[kich1]}
-key[Delete]=${terminfo[kdch1]}
-key[Up]=${terminfo[kcuu1]}
-key[Down]=${terminfo[kcud1]}
-key[Left]=${terminfo[kcub1]}
-key[Right]=${terminfo[kcuf1]}
-key[PageUp]=${terminfo[kpp]}
-key[PageDown]=${terminfo[knp]}
+zstyle ':completion:*' rehash true
 
-# setup key accordingly
-[[ -n "${key[Home]}"    ]]  && bindkey  "${key[Home]}"    beginning-of-line
-[[ -n "${key[End]}"     ]]  && bindkey  "${key[End]}"     end-of-line
-[[ -n "${key[Insert]}"  ]]  && bindkey  "${key[Insert]}"  overwrite-mode
-[[ -n "${key[Delete]}"  ]]  && bindkey  "${key[Delete]}"  delete-char
-[[ -n "${key[Up]}"      ]]  && bindkey  "${key[Up]}"      up-line-or-history
-[[ -n "${key[Down]}"    ]]  && bindkey  "${key[Down]}"    down-line-or-history
-[[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}"    backward-char
-[[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}"   forward-char
+# git status
 
-# Finally, make sure the terminal is in application mode, when zle is
-# active. Only then are the values from $terminfo valid.
-if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
-    function zle-line-init () {
-        printf '%s' ${terminfo[smkx]}
-    }
-    function zle-line-finish () {
-        printf '%s' ${terminfo[rmkx]}
-    }
-    zle -N zle-line-init
-    zle -N zle-line-finish
+setopt prompt_subst
+autoload colors zsh/terminfo
+colors
+
+function __git_prompt {
+  local DIRTY="%{$fg[yellow]%}"
+  local CLEAN="%{$fg[green]%}"
+  local UNMERGED="%{$fg[red]%}"
+  local RESET="%{$terminfo[sgr0]%}"
+  git rev-parse --git-dir >& /dev/null
+  if [[ $? == 0 ]]
+  then
+    echo -n "["
+    if [[ `git ls-files -u >& /dev/null` == '' ]]
+    then
+      git diff --quiet >& /dev/null
+      if [[ $? == 1 ]]
+      then
+        echo -n $DIRTY
+      else
+        git diff --cached --quiet >& /dev/null
+        if [[ $? == 1 ]]
+        then
+          echo -n $DIRTY
+        else
+          echo -n $CLEAN
+        fi
+      fi
+    else
+      echo -n $UNMERGED
+    fi
+    echo -n `git branch | grep '* ' | sed 's/..//'`
+    echo -n $RESET
+    echo -n "]"
+  fi
+}
+
+export RPS1='$(__git_prompt)'
+
+
+###
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
 
-[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
-[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias sudo="sudo -E"
 
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-setopt no_nomatch # if there are no matches for globs, leave them alone and execute the command
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-NDK_ROOT=/opt/android-ndk
-COCOS2DX_ROOT=/media/data5/work/cocos2d-2.0-x-2.0.4
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
+genpasswd() {
+  local l=$1
+  [ "$l" == "" ] && l=16
+  tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
+}
+
+export VISUAL="/usr/bin/vim -p -X"
+alias sudo="sudo -E"
+#alias ls='ls --color=auto'
+#PS1='[\u@\h \W]\$ '
+#PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[0m\] '
+
+if [ "$TERM" = "xterm" ]
+then
+  export TERM="xterm-256color"
+fi
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+export HOME_BIN=$HOME/bin
+export PATH=$PATH:$HOME_BIN
+
+# Make less (and man with PAGER=less) colorized. Handy for less highlight in tmux
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;016m\E[48;5;220m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
