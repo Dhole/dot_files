@@ -87,6 +87,9 @@ alias la='ls -A'
 alias l='ls -CF'
 alias sudo="sudo -E"
 
+# disable autocorrect on some commands
+alias vim='nocorrect vim'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -101,16 +104,12 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 genpasswd() {
-  local l=$1
-  [ "$l" == "" ] && l=16
-  tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
+    local l=$1
+    [ "$l" == "" ] && l=16
+    tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
 }
 
 export VISUAL="/usr/bin/vim -p -X"
-alias sudo="sudo -E"
-#alias ls='ls --color=auto'
-#PS1='[\u@\h \W]\$ '
-#PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[0m\] '
 
 if [ "$TERM" = "xterm" ]
 then
