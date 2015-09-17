@@ -235,10 +235,10 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.c :call DeleteTrailingWS()
-autocmd BufWrite *.cpp :call DeleteTrailingWS()
-autocmd BufWrite *.h :call DeleteTrailingWS()
+"autocmd BufWrite *.py :call DeleteTrailingWS()
+"autocmd BufWrite *.c :call DeleteTrailingWS()
+"autocmd BufWrite *.cpp :call DeleteTrailingWS()
+"autocmd BufWrite *.h :call DeleteTrailingWS()
 
 " Returns true if paste mode is enabled
 function! HasPaste()
@@ -303,7 +303,8 @@ set showmode
 
 " Gui stuff
 if has('gui_running')
-  set guifont=Ubuntu\ Mono\ 11
+"  set guifont=Ubuntu\ Mono\ 11
+  set guifont=Dejavu\ Sans\ Mono\ 10
 endif
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
