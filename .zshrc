@@ -85,8 +85,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-export VISUAL="/usr/bin/vim -p -X"
-
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -127,6 +125,11 @@ fi
 
 # /sbin is no in $PATH in Debian, we add it
 export PATH=$PATH:"/sbin"
+
+if [ "$TERM" = "xterm" ]
+then
+  export TERM="xterm-256color"
+fi
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
