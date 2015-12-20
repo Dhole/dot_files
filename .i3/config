@@ -12,18 +12,16 @@
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below. ISO 10646 = Unicode
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-
-# font xft: tamsynmod 8
-# font -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
-font -*-profont-*-*-*-*-11-*-*-*-*-*-*-*
+# is used in the bar {} block below.
+# This font is widely installed, provides lots of unicode glyphs, right-to-left
+# text rendering and scalability on retina/hidpi displays (thanks to pango).
+font pango:DejaVu Sans Mono 8
+# Before i3 v4.8, we used to recommend this one as the default:
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, if you need a lot of unicode glyphs or
-# right-to-left text rendering, you should instead use pango for rendering and
-# chose a FreeType font, such as:
-# font pango:DejaVu Sans Mono 10
-
+# clear in small sizes. However, its unicode glyph coverage is limited, the old
+# X core fonts rendering does not support right-to-left and this being a bitmap
+# font, it doesn’t scale on retina/hidpi displays.
 # colors
 #class				border	backgr.	text
 client.focused               	#171717 #171717 #a6e22e
@@ -36,7 +34,10 @@ client.background			#121212
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec konsole
+bindsym $mod+Return exec roxterm
+#bindsym $mod+Return exec sakura
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -105,41 +106,59 @@ bindsym $mod+Shift+a focus child
 set $ws1 1:www
 set $ws2 2:work
 set $ws3 3:im
-set $ws4 4:net
-set $ws5 5
+set $ws4 4:irc
+set $ws5 5:mail
 set $ws6 6
 set $ws7 7
 set $ws8 8
 set $ws9 9
 set $ws10 10
+set $ws11 11
+set $ws12 12
+set $ws13 13
+set $ws14 14
+set $ws15 15
+set $ws16 16
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym $mod+F1 workspace $ws11
+bindsym $mod+F2 workspace $ws12
+bindsym $mod+F3 workspace $ws13
+bindsym $mod+F4 workspace $ws14
+bindsym $mod+F5 workspace $ws15
+bindsym $mod+F6 workspace $ws16
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+F1 move container to workspace $ws11
+bindsym $mod+Shift+F2 move container to workspace $ws12
+bindsym $mod+Shift+F3 move container to workspace $ws13
+bindsym $mod+Shift+F4 move container to workspace $ws14
+bindsym $mod+Shift+F5 move container to workspace $ws15
+bindsym $mod+Shift+F6 move container to workspace $ws16
 
 assign [class="Pidgin"] $ws3
-assign [class="Thunderbird"] $ws3
-assign [class="Ktorrent"] $ws4
+assign [class="Thunderbird"] $ws5
+assign [class="Icedove"] $ws5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -150,6 +169,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 for_window [class="Chromium"] border none
 for_window [class="Firefox"] border none
+for_window [class="Iceweasel"] border none
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -165,10 +185,10 @@ mode "resize" {
         bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 4 px or 4 ppt
-        bindsym Down resize grow height 4 px or 4 ppt
-        bindsym Up resize shrink height 4 px or 4 ppt
-        bindsym Right resize grow width 4 px or 4 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -180,43 +200,41 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command $HOME/.scripts/conky-i3bar
-        #status_command i3status -c ~/.i3status.conf
-        # status_command i3status
-	    #font -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
-        font xft: tamsynmod 8
-
-    colors {
-            background #171717
-            statusline #b9c8d1
-            focused_workspace  #171717 #171717 #a6e22e
-	        active_workspace   #ffffff #333333
-            inactive_workspace #171717 #171717 #9c9c9c
-            urgent_workspace   #ffffff #900000
-    }
+        status_command i3status
 }
 
-#Custom things
+hide_edge_borders both
+workspace_auto_back_and_forth yes
+force_display_urgency_hint 400 ms
 
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 10%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 10%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
 
 bindsym XF86AudioPlay exec mocp --toggle-pause
 bindsym XF86AudioStop exec mocp --stop
 bindsym XF86AudioPrev exec mocp --previous
 bindsym XF86AudioNext exec mocp --next
+
 bindsym Ctrl+$mod+l exec xscreensaver-command -lock
+bindsym $mod+Print exec scrot -e 'mv $f ~/screenshots/'
 
-bindsym Print exec scrot -e 'mv $f ~/shots/'
-bindsym $mod+Print exec scrot -s -e 'mv $f ~/shots/'
+bindsym Ctrl+$mod+k exec ~/switch_kbd.sh
 
-hide_edge_borders both
-workspace_auto_back_and_forth yes
-force_display_urgency_hint 400 ms
+# set wallpaper
+exec feh --bg-fill Documents/wallpapers/1IJhloZ.jpg &
 
-#exec kwalletmanager
-#exec thunderbird
+# Start redshift with location in Barcelona
+exec redshift-gtk -l 41.4452:2.0920 &
+
+# Start network manager applet
+exec nm-applet &
+# Start xscreensaver, and make it lock when resuming from sleep
 exec xscreensaver -no-splash &
-
-
+exec xss-lock -- xscreensaver-command --lock &
+# CapsLock key is now compose
+exec setxkbmap -option compose:caps &
+# Disable touchpad
+exec xinput set-prop 11 "Device Enabled" 0 &
+# Run my startup script with some programs
+exec /home/black/startup.sh &

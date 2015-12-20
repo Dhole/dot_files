@@ -53,6 +53,8 @@ Plugin 'Raimondi/delimitMate'
 "Shows git diff in the sign column
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
+"LaTeX support
+Plugin 'lervag/vimtex'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -73,6 +75,13 @@ filetype plugin indent on    " required
 """""""""""""""""""""""
 " Plugins configuration
 """""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" vimtex
+""""""""""""""""""""""""""""""
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
 
 """"""""""""""""""""""""""""""
 " airline
