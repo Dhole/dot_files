@@ -46,7 +46,8 @@ Plugin 'tpope/vim-sleuth'
 "Go plugins
 Plugin 'fatih/vim-go'
 "Rust plugins
-Plugin 'wting/rust.vim'
+"Plugin 'wting/rust.vim'
+Plugin 'rust-lang/rust.vim'
 "Plugin 'delimitMate.vim'
 "Auto close quotes, parenthesis, brackets, etc.
 Plugin 'Raimondi/delimitMate'
@@ -55,6 +56,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 "LaTeX support
 Plugin 'lervag/vimtex'
+
+" Update plugins:
+" $ vim +PluginUpdate +qall
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -273,6 +277,19 @@ set number
 
 nnoremap <F3> :set nonumber!<CR>
 
+function! ToggleMouse()
+    " check if mouse is enabled
+    if &mouse == 'a'
+        " disable mouse
+        set mouse=
+    else
+        " enable mouse everywhere
+        set mouse=a
+    endif
+endfunc
+
+nnoremap <F4> :call ToggleMouse()<CR>
+
 " When I close a tab, remove the buffer
 set nohidden
 
@@ -296,6 +313,9 @@ nnoremap <silent> <C-Left> :tabprevious<CR>
 
 " New Tab
 nnoremap <silent> <C-t> :tabnew<CR>
+
+" Limit width of text to 72 characters for mutt
+"au BufRead /tmp/mutt-* set tw=72
 
 set cursorline " highlight current line
 hi CursorLine term=NONE cterm=none
